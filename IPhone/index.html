@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Transport London Attractions</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- the three things that jQuery Mobile needs to work -->
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://kit.fontawesome.com/84925b097c.js" crossorigin="anonymous"></script>
+  <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>   -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/scripts.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--strip-->
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+</head>
+
+<body>
+  <!-- This is home-->
+  <div data-role="page" id="home" style="background-color:darkgrey">
+    <header data-role="header" style="display: flex; justify-content: center;">
+
+      <img src="img/logo.png" alt="TLA Logo">
+
+    </header>
+
+    <div class="ui-content">
+
+      <h1 class="title">Transport London, <br /> Attractions</h1>
+      <h2 class="slogan">Adventure is for everyone!</h2>
+      <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i
+          class="fas fa-map-marker-alt"></i> icon to get started</h2>
+
+      <a href="#" class="ui-btn">Sign in</a>
+      <a href="#" class="ui-btn">Register</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- This is location page-->
+  <div data-role="page" id="location">
+
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <h1>LONDON LOCATIONS</h1>
+      <p>Select a location from the drop down below</p>
+
+      <div data-role="collapsible">
+        <h4>North</h4>
+
+        <ul data-role="listview">
+          <li><a href="#poi">The National Gallery</a></li>
+          <li><a href="#">Location 2</a></li>
+          <li><a href="#">Location 3</a></li>
+          <li><a href="#">Location 4</a></li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h4>East</h4>
+
+        <ul data-role="listview">
+          <li><a href="#">Location 1</a></li>
+          <li><a href="#">Location 2</a></li>
+          <li><a href="#">Location 3</a></li>
+          <li><a href="#">Location 4</a></li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h4>South</h4>
+
+        <ul data-role="listview">
+          <li><a href="#">Location 1</a></li>
+          <li><a href="#">Location 2</a></li>
+          <li><a href="#">Location 3</a></li>
+          <li><a href="#">Location 4</a></li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h4>West</h4>
+
+        <ul data-role="listview">
+          <li><a href="#">Location 1</a></li>
+          <li><a href="#">Location 2</a></li>
+          <li><a href="#">Location 3</a></li>
+          <li><a href="#">Location 4</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--This is Favourite page-->
+
+  <div data-role="page" id="favourite">
+
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <h1>Favourite locations</h1>
+      <p>Tick the locations you wish to send and confirm</p>
+
+      <fieldset data-role="controlgroup">
+        <legend>Agree to the terms:</legend>
+        <label for="cb1">Option 1</label>
+        <input type="checkbox" name="cb" id="cb1" value="cb1" />
+        <label for="cb2">Option 2</label>
+        <input type="checkbox" name="cb" id="cb2" value="cb2" />
+        <label for="cb3">Option 3</label>
+        <input type="checkbox" name="cb" id="cb3" value="cb3" checked="checked" />
+        <label for="cb4">Option 4</label>
+        <input type="checkbox" name="cb" id="cb4" value="cb4" checked="checked" />
+      </fieldset>
+
+      <a href="#" class="ui-btn">Add Locations</a>
+      <a href="#" class="ui-btn">Remove</a>
+      <a href="#" class="ui-btn">Send</a>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--This is Booking page-->
+
+  <div data-role="page" id="booking">
+
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+      <div>
+        <form id="frmBooking" name="bookingForm" action="_self">
+        <h1>Booking Details</h1>
+        <!--Booking status-->
+        <!--Location-->
+        <div>
+          <div><img src="" alt="location_image"></div>
+          <input id="item_name" name="item_name" type="text" value="Name of Location">
+        </div>
+
+        <a href="#" class="ui-btn">Go TO NEXT STEP</a>
+
+      </div>
+      <div>
+        <h1>Ticket Type</h1>
+        <!--Booking status-->
+        <label for="child">Child:</label>
+        <select id="child" name="child">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option id="total_value1" name="total_value1" value="11000">5 (£11000)</option>
+        </select>
+
+        <label for="adult">Adult:</label>
+        <select id="adult" name="adult">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <label for="senior">Senior Citizen:</label>
+        <select id="senior" name="senior">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <label for="discount">Discount:</label>
+        <input type="text" name="discount" id="discount" value="" placeholder="discount code" />
+        <a href="#" class="ui-btn">GO TO NEXT STEP</a>
+
+          <!-- <input id="total_value" name="total_value" type="text" value="500"> -->
+          <button id="customButton">Purchase</button>
+        </form>
+        
+        
+        <div align="center" id="thankyouPayment"></div>
+      </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--This is Account page-->
+
+  <div data-role="page" id="account">
+
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <h1>My Account</h1>
+      <div>
+        <img src="img/icons/profile.png" alt="profile picture">
+      </div>
+      <fieldset class="ui-field-contain">
+        <label for="f_name">First Name:</label>
+        <input type="text" name="f_name" id="f_name" value="" placeholder="first name" />
+        <label for="l_name">Last Name:</label>
+        <input type="text" name="l_name" id="l_name" value="" placeholder="last name" />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" value="" placeholder="email" />
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" value="" placeholder="password" />
+      </fieldset>
+
+      <a href="#" class="ui-btn">Make Changes</a>
+
+      <h3>Current points</h3>
+      <h3>Milestones</h3>
+
+
+      <a href="#" class="ui-btn">Claim Discount</a>
+      <a href="#" class="ui-btn">Sign out</a>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--This is Comment page-->
+
+  <div data-role="page" id="comment">
+
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <h1>Comment Page</h1>
+      <!--filter-->
+      <label for="filter">Filter comments:</label>
+      <select id="filter" name="filter">
+        <option value="All">All</option>
+        <option value="Mine">Mine</option>
+        <option value="Replied">Replied</option>
+        <option value="Deleted">Deleted</option>
+      </select>
+      <!--apply button-->
+      <a href="#" class="ui-btn">Apply</a>
+
+      <!--comment-->
+      <div>
+        <div>
+          <h4>Username:</h4>
+        </div>
+        <div>
+          <h4>I would recommend ti go here guys, it such a great tourist attraction</h4>
+        </div>
+        <div>
+          <a href="#">Reply</a>
+          <a href="#">Edit</a>
+          <a href="#">Delete</a>
+        </div>
+      </div>
+
+
+
+
+      <!--add a comment button-->
+      <a href="#" class="ui-btn">ADD A COMMENT</a>
+
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--This is POI page-->
+
+  <div data-role="page" id="poi">
+    <a data-rel="back">Back</a>
+    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <h1>The National Gallery</h1>
+
+      <div>
+        <img src="img/poi1.png" alt="The National Gallery">
+      </div>
+      <div>
+        <a href="#">Like</a>
+        <a href="#comment">Comment</a>
+        <a href="#">Share</a>
+      </div>
+      <div><p>The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
+        Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
+        mid-13th century to 1900.</p>
+      </div>
+      <div>
+        <h3>Give a rating</h3>
+        <div>
+          <!--Star rating-->
+         
+        </div>
+      </div>
+        <div>
+          <!--Google maps integration-->
+        </div>
+        <h3>Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
+      
+        <a href="ARpage.html" rel="external" class="ui-btn">Open camera to scan QR code</a>
+        <!--<a href="#ar" class="ui-btn">SCAN QR CODE</a>-->
+        <a href="#" class="ui-btn">MAKE A BOOKING</a>
+      
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#home"><span style="font-size: 2em; color: black;">
+                <i class="fas fa-home"></i>
+              </span></a></li>
+
+
+          <li><a href="#location"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-map-marker"></i>
+              </span></a></li>
+
+          <li><a href="#favourite"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-star"></i>
+              </span></a></li>
+
+          <li><a href="#booking"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-shopping-cart"></i>
+              </span></a></li>
+
+          <li><a href="#account"><span style="font-size: 2em; color: black;">
+                <i class="fa fa-user"></i>
+              </span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    jQuery(function($) {
+      var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          // Use the token to create the charge with a server-side script.
+          // You can access the token ID with `token.id`
+
+          //This will be printed when the transaction is successful. To charge, server side scripting is required.
+          if(token.id){
+                    $("#thankyouPayment").html("Thank you, your payment was successful!");
+                    
+                    //You can also use the following code to re-submit the form content to another file for further processing.
+                    //Don't forget to add action to your form
+                    //$form.get(0).submit();
+
+                    //Or save form data locally, using local storage.
+          }
+        }
+      });
+	  
+
+      $('#customButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'Stripe Payment',
+          currency: 'gbp',
+          description: $('#item_name').val(),
+          amount: $('#total_value1').val() * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+    </script>
+</body>
+
+</html>
