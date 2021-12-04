@@ -20,6 +20,40 @@
   <!--strip-->
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4fxzjh0_9j9aIXCecrSeDxBztKU5Lzao&callback=initMap"
+      defer
+    ></script>
+    <style>
+	
+      #map {
+        height: 500px;
+        width: 100%;
+		    margin: 0;
+        padding: 5px;
+       }
+	</style>
+
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    //51.50900577138144, -0.1283472815019485
+    const uluru = { lat: 51.50900577138144, lng: -0.1283472815019485 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+  title: "University of Westminster"
+    });
+  }
+</script>
 </head>
 
 <body>
@@ -28,7 +62,8 @@
     <header data-role="header"
       style="display: flex; justify-content: center; position: fixed; width: 100vw; background-color: transparent; border: transparent; z-index: 999;">
 
-      <img src="img/logo.png" alt="TLA Logo" width="110px" height="70px">
+      <!-- <img src="img/logo.png" alt="TLA Logo" width="110px" height="70px"> -->
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
 
     </header>
 
@@ -153,7 +188,8 @@
   <!-- This is location page-->
   <div data-role="page" id="location">
 
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
@@ -210,7 +246,7 @@
 
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -242,7 +278,8 @@
 
   <div data-role="page" id="favourite">
 
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
@@ -268,7 +305,7 @@
 
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -300,7 +337,8 @@
 
   <div data-role="page" id="booking">
 
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
@@ -358,7 +396,7 @@
       </div>
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -390,7 +428,8 @@
 
   <div data-role="page" id="account">
 
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
@@ -421,7 +460,7 @@
 
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -453,7 +492,9 @@
 
   <div data-role="page" id="comment">
 
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
@@ -494,7 +535,7 @@
 
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -525,46 +566,74 @@
   <!--This is POI page-->
 
   <div data-role="page" id="poi">
-    <a data-rel="back">Back</a>
-    <div data-role="header" style="display: flex; justify-content: center;"><img src="img/logo.png" alt="TLA Logo">
+    
+    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+      <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
+      <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
 
-      <h1>The National Gallery</h1>
+      <h1 style="text-align: center;">The National Gallery</h1>
 
       <div>
-        <img src="img/poi1.png" alt="The National Gallery">
+        <img src="img/poi1.png" alt="The National Gallery" style="width: 300px;
+        margin: auto;
+        display: flex;
+    ">
       </div>
-      <div>
-        <a href="#">Like</a>
-        <a href="#comment">Comment</a>
-        <a href="#">Share</a>
+      <div style="display: flex; width: 300px; justify-content: space-evenly; margin: auto; margin-top: 20px; font-weight: bold;">
+        Favourite: <a href="#"><span class="material-icons" style="color: #a7a7a7;">
+          favorite
+          </span></a>
+        Comments: <a href="#comment"><span class="material-icons" style="color: #a7a7a7;">
+          comment
+          </span></a>
+        Share: <a href="#"><span class="material-icons" style="color: #a7a7a7;">
+          share
+          </span></a>
       </div>
-      <div>
-        <p>The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
+      <div style="width: 300px;
+      display: flex;
+      margin: auto;margin-top: 10px;">
+        <p style="text-align: justify;">The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
           Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
           mid-13th century to 1900.</p>
       </div>
+      <div style="display: table;
+      margin: auto;">
+        <iframe margin= "0 auto" width="300" height="300" src="https://www.youtube.com/embed/qKXTHkZa15I" frameborder="1" allowfullscreen></iframe>
+      </div>
       <div>
-        <h3>Give a rating</h3>
+        <h3 style="    text-align: center;
+        font-size: inherit;margin-top: 32px;">Give a rating</h3>
         <div>
           <!--Star rating-->
-
+          <div class="star-wrapper">
+            <a href="#" class="fas fa-star s1"></a>
+            <a href="#" class="fas fa-star s2"></a>
+            <a href="#" class="fas fa-star s3"></a>
+            <a href="#" class="fas fa-star s4"></a>
+            <a href="#" class="fas fa-star s5"></a>
+          </div>
         </div>
       </div>
       <div>
         <!--Google maps integration-->
+        <div id="map"></div>
       </div>
-      <h3>Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
-
-      <a href="ARpage.html" rel="external" class="ui-btn">Open camera to scan QR code</a>
+      <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
+      <a href="ARpage.html" rel="external" class="ui-btn" style="width: 300px;font-weight: lighter;color: white;display: inline-block;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span class="material-icons" style="display: inline-block;">
+      photo_camera
+      </span> OPEN CAMERA TO SCAN QR CODE</a>
       <!--<a href="#ar" class="ui-btn">SCAN QR CODE</a>-->
-      <a href="#" class="ui-btn">MAKE A BOOKING</a>
+      <a href="#" class="ui-btn" style="width: 300px;font-weight: lighter;color: white;display: inline-flex;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons">
+      add
+      </span> MAKE A BOOKING</a>
 
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
