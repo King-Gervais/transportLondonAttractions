@@ -27,6 +27,12 @@ la*{
   margin-left: -110px;
 } 
 
+.favouriteAddRemove{
+    color: #ffffff;
+    font-style: italic;
+    display: inline-flex;
+} 
+
 
 .caroussel{
     display:flex;
@@ -205,5 +211,43 @@ la*{
   font-size: 18px;
 }
 
+/* rating */
+.star-wrapper {
+  direction: rtl; 
+  margin: auto;
+  display:table;
+  margin-bottom: 85px;
+}
+.star-wrapper a {
+  /* font-size: 4em; */
+  color: rgb(173, 173, 173);
+  text-decoration: none;
+  transition: all 0.5s;
+  margin: 4px;
+}
+.star-wrapper a:hover {
+  color: gold;
+  transform: scale(1.3);
+}
+.s1:hover ~ a {
+  color: gold;
+}
+.s2:hover ~ a {
+  color: gold;
+}
+.s3:hover ~ a {
+  color: gold;
+}
+.s4:hover ~ a {
+  color: gold;
+}
+.s5:hover ~ a {
+  color: gold;
+}
+.wraper {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
 
 
