@@ -27,6 +27,12 @@ la*{
   margin-left: -110px;
 } 
 
+.favouriteAddRemove{
+    color: #ffffff;
+    font-style: italic;
+    display: inline-flex;
+} 
+
 
 .caroussel{
     display:flex;

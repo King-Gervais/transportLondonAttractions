@@ -16,6 +16,7 @@
   <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>   -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/scripts.js"></script>
+  <script src="js/favourites.js"></script>
 
   <!--strip-->
   <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -204,7 +205,7 @@
 
           <ul data-role="listview">
             <li><a href="#poi">The National Gallery</a></li>
-            <li><a href="#">Primrose Hill</a></li>
+            <li><a href="#poi2">Primrose Hill</a></li>
             <li><a href="#">The British Library</a></li>
             <li><a href="#">Madame Tussauds</a></li>
           </ul>
@@ -284,10 +285,13 @@
 
     <div role="main" class="ui-content">
 
-      <h1>Favourite locations</h1>
-      <p>Tick the locations you wish to send and confirm</p>
+      <h1 style="text-align: center;">Favourite locations</h1>
+      <p style="text-align: center;">Tick the locations you wish to send and confirm</p>
 
-      <fieldset data-role="controlgroup">
+      <div id="favourite-content" style="height: 420px;"><p style=" font-weight: bold; padding: 6px; text-align: center;">Your favourites list is empty </p></div>
+      
+
+      <!-- <fieldset data-role="controlgroup">
         <legend>Agree to the terms:</legend>
         <label for="cb1">Option 1</label>
         <input type="checkbox" name="cb" id="cb1" value="cb1" />
@@ -297,11 +301,19 @@
         <input type="checkbox" name="cb" id="cb3" value="cb3" checked="checked" />
         <label for="cb4">Option 4</label>
         <input type="checkbox" name="cb" id="cb4" value="cb4" checked="checked" />
-      </fieldset>
-
-      <a href="#" class="ui-btn">Add Locations</a>
-      <a href="#" class="ui-btn">Remove</a>
-      <a href="#" class="ui-btn">Send</a>
+      </fieldset> -->
+     
+      <div class="favouriteAddRemove">
+        <a href="location" class="ui-btn" style="width:130px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">ADD LOCATIONS</a>
+        <a href="#" onclick="remove()" class="ui-btn" style="width:130px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">REMOVE</a>
+        <!-- <a href="#" onclick="remove()" class="ui-btn" style="width:130px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">REMOVE</a> -->
+      </div>
+      
+      <div>
+        <a href="#" rel="external" class="ui-btn" style="width: 312px;font-weight: lighter;color: white;display: inline-block;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;">SEND</a>
+      </div>
+     
+        
 
     </div>
 
@@ -582,6 +594,10 @@
         display: flex;
     ">
       </div>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <input type="checkbox" name="favourite1" id="favourite1" class="custom">
+        <label for="favourite1"><span class="ui-icon-star ui-btn-icon-left">Add to favourites</span></label>
+     </fieldset>
       <div style="display: flex; width: 300px; justify-content: space-evenly; margin: auto; margin-top: 20px; font-weight: bold;">
         Favourite: <a href="#"><span class="material-icons" style="color: #a7a7a7;">
           favorite
@@ -723,6 +739,32 @@
       setTimeout(showSlides, 5000); // Change image every 2 seconds
     }
   </script>
+
+<script>
+  $(document).on( 'pagecontainerbeforehide', 'body', function( event, ui){
+    //do something
+    if ( ui.nextPage.attr('id')== "favourite") {
+      $("#favourite-content").html ("");
+       if ($( "#favourite1" ).is( ":checked" )) {
+       $("#favourite-content").append("<p>The National Gallery</p>");
+      //  $("#favourite-content").append("<p>The National Gallery</p>").attr("id","p2");
+     }
+      if ($( "#favourite2" ).is( ":checked" )) {
+       $("#favourite-content").append("<p>item2 details</p>");
+     }
+      
+     }
+    
+    });
+  
+    </script>
+
+    <!-- <script>
+      function remove() {
+      var p2 = document.getElementById("p2");
+      p2.parentNode.removeChild(p2);
+      }
+    </script> -->
 
 </body>
 
