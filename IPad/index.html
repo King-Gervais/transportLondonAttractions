@@ -17,10 +17,6 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/scripts.js"></script>
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!--strip-->
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
@@ -28,25 +24,105 @@
 
 <body>
   <!-- This is home-->
-  <div data-role="page" id="home" style="background-color:darkgrey">
-    <header data-role="header" style="display: flex; justify-content: center;">
+  <div data-role="page" id="home" style="background-color:rgb(255, 255, 255)">
+    <header data-role="header"
+      style="display: flex; justify-content: center; position: fixed; width: 100vw; background-color: transparent; border: transparent; z-index: 999; margin-right: 350px;">
 
-      <img src="img/logo.png" alt="TLA Logo">
+      <img src="img/logo.png" alt="TLA Logo" width="110px" height="70px">
 
     </header>
 
-    <div class="ui-content">
+    <div class="ui-content" style="padding:0;">
 
-      <h1 class="title">Transport London, <br /> Attractions</h1>
-      <h2 class="slogan">Adventure is for everyone!</h2>
-      <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i
-          class="fas fa-map-marker-alt"></i> icon to get started</h2>
+      <div class="slideshow-container">
 
-      <a href="#" class="ui-btn">Sign in</a>
-      <a href="#" class="ui-btn">Register</a>
+        <div class="mySlides fade">
+          <img src="img/home/Image1.png">
+
+          <div class="homecontent">
+            <h1 class="title">Transport London<br />Attractions</h1>
+            <h2 class="slogan">Adventure is for everyone!</h2>
+            <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i
+                class="fas fa-map-marker-alt"></i> icon to get started</h2>
+
+            <h2 class="signinPrompt">Sign up now<br />for discounts and more...<h2>
+            <div class="signupin">
+              <a href="#" class="ui-btn" style="width: 70px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
+              <a href="#" class="ui-btn" style="width: 70px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/home/Image2.png">
+
+          <div class="homecontent">
+            <h1 class="title">Bookings</h1>
+            <img class="home-icons" src="img/home/ticket.png">
+            <h2 class="feature"> Tickets to take you <br />to memory lane </h2>
+          </div>
+
+
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/home/Image3.png">
+
+          <div class="homecontent">
+            <h1 class="title">Attractions</h1>
+            <img class="home-icons" src="img/home/telephone.png">
+            <h2 class="feature"> Local attractions taking <br /> place everyday </h2>
+          </div>
+
+
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/home/Image4.png">
+
+          <div class="homecontent">
+            <h1 class="title">Convenience</h1>
+            <img class="home-icons" src="img/home/calendar.png">
+            <h2 class="feature"> Search by date, location or <br />category Anytime! Anyplace! <br />We got it</h2>
+          </div>
+
+
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/home/Image5.png">
+
+          <div class="homecontent">
+            <h1 class="title">Treasure Hunt</h1>
+            <img class="home-icons" src="img/home/qrTreasure.png">
+            <h2 class="feature"> Try and locate a QR code at <br />this location to unlock its secrets </h2>
+          </div>
+
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align:center; display: none;">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+
+      </div>
+
+
+
+
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
@@ -82,52 +158,56 @@
 
     <div role="main" class="ui-content">
 
-      <h1>LONDON LOCATIONS</h1>
-      <p>Select a location from the drop down below</p>
+      <h1 class="locationText">LONDON LOCATIONS</h1>
+      <p class="locationText" style="margin-bottom: 66px;">Select a location from the drop down below</p>
 
-      <div data-role="collapsible">
-        <h4>North</h4>
 
-        <ul data-role="listview">
-          <li><a href="#poi">The National Gallery</a></li>
-          <li><a href="#">Location 2</a></li>
-          <li><a href="#">Location 3</a></li>
-          <li><a href="#">Location 4</a></li>
-        </ul>
+      <div class="locationlists">
+        <div data-role="collapsible" class="acol">
+          <h4>North</h4>
+
+          <ul data-role="listview">
+            <li><a href="#poi">The National Gallery</a></li>
+            <li><a href="#">Primrose Hill</a></li>
+            <li><a href="#">The British Library</a></li>
+            <li><a href="#">Madame Tussauds</a></li>
+          </ul>
+        </div>
+        <br>
+        <div data-role="collapsible" class="acol">
+          <h4>East</h4>
+
+          <ul data-role="listview">
+            <li><a href="#">Brick Lane market</a></li>
+            <li><a href="#">Victoria Park</a></li>
+            <li><a href="#">Westfield Stratford City</a></li>
+            <li><a href="#">Roof East</a></li>
+          </ul>
+        </div>
+        <br>
+        <div data-role="collapsible" class="acol">
+          <h4>South</h4>
+
+          <ul data-role="listview">
+            <li><a href="#">Greenwich Market</a></li>
+            <li><a href="#">O2 Arena</a></li>
+            <li><a href="#">Maltby Street Market</a></li>
+            <li><a href="#">The Shard</a></li>
+          </ul>
+        </div>
+        <br>
+        <div data-role="collapsible" class="acol">
+          <h4>West</h4>
+
+          <ul data-role="listview">
+            <li><a href="#">Kensington Gardens</a></li>
+            <li><a href="#">Kensington Palace</a></li>
+            <li><a href="#">GoBoat London</a></li>
+            <li><a href="#">Buckingham Palace</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div data-role="collapsible">
-        <h4>East</h4>
-
-        <ul data-role="listview">
-          <li><a href="#">Location 1</a></li>
-          <li><a href="#">Location 2</a></li>
-          <li><a href="#">Location 3</a></li>
-          <li><a href="#">Location 4</a></li>
-        </ul>
-      </div>
-
-      <div data-role="collapsible">
-        <h4>South</h4>
-
-        <ul data-role="listview">
-          <li><a href="#">Location 1</a></li>
-          <li><a href="#">Location 2</a></li>
-          <li><a href="#">Location 3</a></li>
-          <li><a href="#">Location 4</a></li>
-        </ul>
-      </div>
-
-      <div data-role="collapsible">
-        <h4>West</h4>
-
-        <ul data-role="listview">
-          <li><a href="#">Location 1</a></li>
-          <li><a href="#">Location 2</a></li>
-          <li><a href="#">Location 3</a></li>
-          <li><a href="#">Location 4</a></li>
-        </ul>
-      </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
@@ -226,15 +306,15 @@
     <div role="main" class="ui-content">
       <div>
         <form id="frmBooking" name="bookingForm" action="_self">
-        <h1>Booking Details</h1>
-        <!--Booking status-->
-        <!--Location-->
-        <div>
-          <div><img src="" alt="location_image"></div>
-          <input id="item_name" name="item_name" type="text" value="Name of Location">
-        </div>
+          <h1>Booking Details</h1>
+          <!--Booking status-->
+          <!--Location-->
+          <div>
+            <div><img src="" alt="location_image"></div>
+            <input id="item_name" name="item_name" type="text" value="Name of Location">
+          </div>
 
-        <a href="#" class="ui-btn">Go TO NEXT STEP</a>
+          <a href="#" class="ui-btn">Go TO NEXT STEP</a>
 
       </div>
       <div>
@@ -269,11 +349,11 @@
         <input type="text" name="discount" id="discount" value="" placeholder="discount code" />
         <a href="#" class="ui-btn">GO TO NEXT STEP</a>
 
-          <!-- <input id="total_value" name="total_value" type="text" value="500"> -->
-          <button id="customButton">Purchase</button>
+        <!-- <input id="total_value" name="total_value" type="text" value="500"> -->
+        <button id="customButton">Purchase</button>
         </form>
-        
-        
+
+
         <div align="center" id="thankyouPayment"></div>
       </div>
     </div>
@@ -461,26 +541,27 @@
         <a href="#comment">Comment</a>
         <a href="#">Share</a>
       </div>
-      <div><p>The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
-        Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
-        mid-13th century to 1900.</p>
+      <div>
+        <p>The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
+          Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
+          mid-13th century to 1900.</p>
       </div>
       <div>
         <h3>Give a rating</h3>
         <div>
           <!--Star rating-->
-         
+
         </div>
       </div>
-        <div>
-          <!--Google maps integration-->
-        </div>
-        <h3>Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
-      
-        <a href="ARpage.html" rel="external" class="ui-btn">Open camera to scan QR code</a>
-        <!--<a href="#ar" class="ui-btn">SCAN QR CODE</a>-->
-        <a href="#" class="ui-btn">MAKE A BOOKING</a>
-      
+      <div>
+        <!--Google maps integration-->
+      </div>
+      <h3>Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
+
+      <a href="ARpage.html" rel="external" class="ui-btn">Open camera to scan QR code</a>
+      <!--<a href="#ar" class="ui-btn">SCAN QR CODE</a>-->
+      <a href="#" class="ui-btn">MAKE A BOOKING</a>
+
     </div>
 
     <div data-role="footer" data-position="fixed">
@@ -512,29 +593,29 @@
   </div>
 
   <script>
-    jQuery(function($) {
+    jQuery(function ($) {
       var $form = $('#frmBooking');
       var handler = StripeCheckout.configure({
         key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
-        token: function(token) {
+        token: function (token) {
           // Use the token to create the charge with a server-side script.
           // You can access the token ID with `token.id`
 
           //This will be printed when the transaction is successful. To charge, server side scripting is required.
-          if(token.id){
-                    $("#thankyouPayment").html("Thank you, your payment was successful!");
-                    
-                    //You can also use the following code to re-submit the form content to another file for further processing.
-                    //Don't forget to add action to your form
-                    //$form.get(0).submit();
+          if (token.id) {
+            $("#thankyouPayment").html("Thank you, your payment was successful!");
 
-                    //Or save form data locally, using local storage.
+            //You can also use the following code to re-submit the form content to another file for further processing.
+            //Don't forget to add action to your form
+            //$form.get(0).submit();
+
+            //Or save form data locally, using local storage.
           }
         }
       });
-	  
 
-      $('#customButton').on('click', function(e) {
+
+      $('#customButton').on('click', function (e) {
         // Code Section B  Open Checkout with further options
         handler.open({
           name: 'Stripe Payment',
@@ -546,11 +627,34 @@
       });
 
       // Code Section C  Close Checkout on page navigation
-      $(window).on('popstate', function() {
+      $(window).on('popstate', function () {
         handler.close();
       });
-      });
-    </script>
+    });
+  </script>
+  <!-- this is for the caroussel -->
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      // setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
+
 </body>
 
 </html>
