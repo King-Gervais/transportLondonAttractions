@@ -1,14 +1,15 @@
-$(document).on( 'pagecontainerbeforehide', 'body', function( event, ui){
+$(document).on( 'pagecontainerbeforehide', 'body', function( event, ui)
+    {
     //do something
-    if ( ui.nextPage.attr('id')== "favourites") {
+    if ( ui.nextPage.attr('id')== "favourite") {
         $("#favourite-content").html ("");
-         if ($( "#favourite1" ).is( ":checked" )) {
-             $("#favourite-content").append("<p>item1 details</p>");
-         }
-          if ($( "#favourite2" ).is( ":checked" )) {
-             $("#favourite-content").append("<p>item2 details</p>");
-         }
-        
-       }
-    
+
+    if ($( "#favourite1" ).is( ":checked" )) {
+        $("#favourite-content").append("<p>The National Gallery</p>");
+      }
+
+    if ($( "#favourite2" ).is( ":checked" )) {
+        $("#favourite-content").append("<p>Primrose hill</p>");
+      }
+    }
     });

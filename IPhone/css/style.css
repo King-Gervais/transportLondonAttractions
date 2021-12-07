@@ -28,10 +28,22 @@ la*{
 } 
 
 .favouriteAddRemove{
-    color: #ffffff;
-    font-style: italic;
-    display: inline-flex;
+  color: #ffffff;
+  font-style: italic;
+  margin: auto;
+  text-align: center;
+  width: 70%;
 } 
+
+.favouriteAddRemove a{
+  font-weight: lighter;
+    color: white;
+    display: inline-block;
+    background-color: #652CB3;
+    border: 0;
+    border-radius: 5px;
+    font-style: normal;
+}
 
 
 .caroussel{
@@ -216,7 +228,7 @@ la*{
   direction: rtl; 
   margin: auto;
   display:table;
-  margin-bottom: 85px;
+  margin-bottom: 20px;
 }
 .star-wrapper a {
   /* font-size: 4em; */
@@ -249,5 +261,60 @@ la*{
   bottom: 30px;
   right: 50px;
 }
+/******/
 
+/* this is for the map */
+#map {
+  height: 300px;
+  padding: 5px;
+ }
+ /******/
 
+#favourite-content{
+  height: 300px;
+  width:70%;
+}
+
+.favouriteAddRemove{
+  color: #ffffff;
+  font-style: italic;
+  width: 70%;
+} 
+
+.information-into{
+  width:300px;
+  float:left;
+  margin:0 10px;
+}
+
+.information-into img{
+  width: 100%;
+}
+
+.information-text{
+  width: 300px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.information-video, .information-map {
+    width: 90%;
+}
+
+.information-button{
+  width: 70%;
+}
+
+/*****/
+
+.grid{
+  display:grid;
+  padding: 10px;
+}
+
+.center{
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
