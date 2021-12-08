@@ -28,6 +28,7 @@
 
   <!--Google Maps-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4fxzjh0_9j9aIXCecrSeDxBztKU5Lzao&callback=initMap" defer></script>
+
 </head>
 
 <body>
@@ -520,22 +521,7 @@
 
       <div class="information-into grid">
         <img src="img/poi1.png" alt="The National Gallery" style=" margin: auto; display: flex;">
-
-        <fieldset data-role="controlgroup" data-type="horizontal">
-          <input type="checkbox" name="favourite1" id="favourite1" class="custom">
-          <label for="favourite1"><span class="ui-icon-star ui-btn-icon-left">Add to favourites</span></label>
-        </fieldset> 
-
-        <div>
-          Favourite: 
-          <a href="#"><span class="material-icons" style="color: #a7a7a7;"> favorite </span></a>
-
-          Comments: 
-          <a href="#comment"><span class="material-icons" style="color: #a7a7a7;">comment</span></a>
-
-          Share:
-          <a href="#"><span class="material-icons" style="color: #a7a7a7;">share</span></a>
-        </div>  
+        
       </div>
       
       <div class="information-text grid">
@@ -543,6 +529,16 @@
           Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
           mid-13th century to 1900.
         </p>
+      </div>
+
+      <div style="width:100%">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <input style=""type="checkbox" class="actionbtn" name="favourite1" id="favourite1">
+          <label for="favourite1">Add Favourite</label>
+        </fieldset> 
+        
+        <button>Comment</button>
+        <button>Share</button>
       </div>
 
       <div class="information-video center grid">

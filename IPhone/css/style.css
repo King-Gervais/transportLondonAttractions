@@ -275,6 +275,12 @@ la*{
   width:70%;
 }
 
+.actionbtn{
+  
+  color: black;
+
+}
+
 .favouriteAddRemove{
   color: #ffffff;
   font-style: italic;
