@@ -13,8 +13,8 @@
   <script src="https://kit.fontawesome.com/84925b097c.js" crossorigin="anonymous"></script>
 
   <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>   -->
+  <link rel="stylesheet" type="text/css" href="css/share.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/scripts.js"></script>
   <script src="js/favourites.js"></script>
   <script src="js/map.js"></script>
   <script src="js/homepage.js"></script>
@@ -43,7 +43,7 @@
     <!-- this is the the slideshow for the home page -->
     <div class="ui-content" style="padding:0;">
       <div class="slideshow-container">
-
+        
         <div class="mySlides fade">
           <img src="img/home/Image1.png">
             <div class="homecontent">
@@ -53,8 +53,8 @@
 
               <h2 class="signinPrompt">Sign up now<br />for discounts and more...<h2>
               <div class="signupin">
-                <a href="#" class="ui-btn" style="width: 70px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
-                <a href="#" class="ui-btn" style="width: 70px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
+                <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
+                <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
               </div>
             </div>
         </div>
@@ -99,17 +99,18 @@
           </div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>          
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div style="text-align:center; display: none;">
+        
+      </div>
+        
+        <div style="text-align:center;">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
         </div>
-      </div>
     </div>
 
     <!-- this is the footer -->
@@ -533,13 +534,52 @@
 
       <div style="width:100%">
         <fieldset data-role="controlgroup" data-type="horizontal">
-          <input style=""type="checkbox" class="actionbtn" name="favourite1" id="favourite1">
+          <input type="checkbox" class="actionbtn" name="favourite1" id="favourite1">
           <label for="favourite1">Add Favourite</label>
         </fieldset> 
         
         <button>Comment</button>
-        <button>Share</button>
-      </div>
+
+        <!--Test-->
+      <!-- <div class="share-dialog">
+        <header>
+          <h3 class="dialog-title">Share</h3>
+          <button id="CloseShareBtn" onclick="show()" style="width: 80px; padding: 10px 6px;" class="close-button">Close</svg></button>
+        </header>
+        <div class="targets">
+          <a class="button">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          
+          <a class="button">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          
+          <a class="button">
+            <i class="fab fa-whatsapp"></i>
+            <span>Whatsapp</span>
+          </a>
+          
+          <a class="button">
+            <i class="far fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+       <div class="link">
+          <div class="pen-url">https://tla/poi#</div>
+          <button class="copy-link">Copy Link</button>
+        </div>
+      </div> -->
+
+      <button id="shareBtn" onclick="hide()" class="share-button" type="button" title="Share this article">
+        <span>Share</span>
+      </button>
+
+    </div>
+        <!--End test-->
+      
 
       <div class="information-video center grid">
         <iframe margin= "0 auto" width="100%" height="300" src="https://www.youtube.com/embed/qKXTHkZa15I" frameborder="1" allowfullscreen></iframe>
@@ -575,11 +615,43 @@
         <a href="#" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons"> add
         </span> MAKE A BOOKING</a>
       </div>
-    </div>
 
+    </div>
+    
     <!-- this is the footer -->
     <div data-role="footer" data-position="fixed" style="position: fixed;">
-      <nav data-role="navbar">
+      
+      <nav data-role="navbar"><div class="share-dialog">
+        <header>
+          <h3 class="dialog-title">Share</h3>
+          <button id="CloseShareBtn" onclick="show()" style="width: 80px; padding: 10px 6px; background-color: #652CB3; color: white;" class="close-button">Close</svg></button>
+        </header>
+        <div class="targets">
+          <a class="button" href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          
+          <a class="button" href="https://twitter.com/home">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          
+          <a class="button" href="https://web.whatsapp.com">
+            <i class="fab fa-whatsapp"></i>
+            <span>Whatsapp</span>
+          </a>
+          
+          <a class="button" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiW1NOHvtr0AhVKY8AKHfu9Bz4QjBB6BAgNEAE&url=https%3A%2F%2Fgmail.google.com%2Finbox%2F&usg=AOvVaw0ZEKMYWSO1FGP05FQnsY9S">
+            <i class="far fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+        <!-- <div class="link">
+          <div class="pen-url">https://tla/poi#</div>
+          <button class="copy-link">Copy Link</button>
+        </div> -->
+      </div>
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
                 <i class="fas fa-home"></i>
@@ -709,26 +781,75 @@
 
 <!-- this is for the caroussel -->
 <script>
-  var slideIndex = 0;
-  showSlides();
+  // var slideIndex = 0;
+  // showSlides();
 
-  function showSlides() {
+  // function showSlides() {
+  //   var i;
+  //   var slides = document.getElementsByClassName("mySlides");
+  //   var dots = document.getElementsByClassName("dot");
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   slideIndex++;
+  //   if (slideIndex > slides.length) { slideIndex = 1 }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex - 1].style.display = "block";
+  //   dots[slideIndex - 1].className += " active";
+  //   setTimeout(showSlides, 5000); // Change image every 2 seconds
+  // }
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
   }
 </script>
 
+<!-- <script>
+  function hide() {
+    var x = document.getElementById("shareBtn");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function show(){
+    var y =  document.getElementById("shareBtn");
+    if(y.style.display ==="block"){
+      y.style.display = "none"
+    }else {
+      y.style.display = "block";
+    }
+  }
+</script> -->
+
 </body>
+  <script src="js/scripts.js"></script>
 </html>
