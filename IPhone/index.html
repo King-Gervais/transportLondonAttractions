@@ -34,7 +34,7 @@
 <body>
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!-- This is home-->
-  <div data-role="page" id="home" style="background-color:rgb(255, 255, 255)">
+  <div data-role="page" id="home" style="background-color:rgb(255, 255, 255); padding-bottom: 0 !important;">
     <header data-role="header" style="display: flex; justify-content: center; position: fixed; width: 100vw; background-color: transparent; border: transparent; z-index: 999;">
       <!-- <img src="img/logo.png" alt="TLA Logo" width="110px" height="70px"> -->
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
@@ -45,7 +45,7 @@
       <div class="slideshow-container">
         
         <div class="mySlides fade">
-          <img src="img/home/Image1.png">
+          <img style="width: 100%;" src="img/home/Image1.png">
             <div class="homecontent">
               <h1 class="title">Transport London<br />Attractions</h1>
               <h2 class="slogan">Adventure is for everyone!</h2>
@@ -56,11 +56,14 @@
                 <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
                 <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
               </div>
+
+
+              
             </div>
         </div>
 
         <div class="mySlides fade">
-          <img src="img/home/Image2.png">
+          <img style="width: 100%;" src="img/home/Image2.png">
 
           <div class="homecontent">
             <h1 class="title">Bookings</h1>
@@ -70,7 +73,7 @@
         </div>
 
         <div class="mySlides fade">
-          <img src="img/home/Image3.png">
+          <img style="width: 100%;" src="img/home/Image3.png">
 
           <div class="homecontent">
             <h1 class="title">Attractions</h1>
@@ -80,7 +83,7 @@
         </div>
 
         <div class="mySlides fade">
-          <img src="img/home/Image4.png">
+          <img style="width: 100%;" src="img/home/Image4.png">
 
           <div class="homecontent">
             <h1 class="title">Convenience</h1>
@@ -90,7 +93,7 @@
         </div>
 
         <div class="mySlides fade">
-          <img src="img/home/Image5.png">
+          <img style="width: 100%;" src="img/home/Image5.png">
 
           <div class="homecontent">
             <h1 class="title">Treasure Hunt</h1>
@@ -101,16 +104,16 @@
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>          
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-      </div>
-        
-        <div style="text-align:center;">
+        <div style="text-align:center; position: absolute; bottom: 68px; left: 132px;  ">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
         </div>
+      </div>
+        
+        
     </div>
 
     <!-- this is the footer -->
@@ -447,20 +450,50 @@
     <div role="main" class="ui-content">
       <h1 class="center">Comment Page</h1>
       <!--filter-->
-      <label for="filter">Filter comments:</label>
+      <!-- <label for="filter">Filter comments:</label>
 
       <select id="filter" name="filter">
         <option value="All">All</option>
         <option value="Mine">Mine</option>
         <option value="Replied">Replied</option>
         <option value="Deleted">Deleted</option>
-      </select>
+      </select> -->
 
       <!--apply button-->
-      <a href="#" class="ui-btn">Apply</a>
+      <!-- <a href="#" class="ui-btn">Apply</a> -->
 
       <!--comment-->
-      <div>
+
+      <form id="FormName" action="(EmptyReference!)" method="get" name="FormName">
+        <!-- <fieldset data-role="controlgroup">
+        <legend>Do you want to add comments:</legend>
+          <label for="radio-choice-1">Yes</label>
+          <input type="radio" name="radiogroup" id="radio-choice-1">
+          <label for="radio-choice-2">No</label>
+          <input type="radio" name="radiogroup" id="radio-choice-2" checked>
+        </fieldset> -->
+      
+      <!--Adjust your code so the comments are displayed nicely styled. Make sure you overide old comments. See how you can grap the comments from this page and make it appear in the page with the Detailed Point of Intereset Pages-->
+    
+      
+        <fieldset id="hiddenFieldset">
+          <div class="ui-field-contain">
+            <label for="inputBox">Add your comment:</label>
+            <input type="text" name="inputBox" id="inputBox" placeholder="Text input" value="">
+          </div>	
+          <button id="add" type="button">Add</button>
+          <h3>Comments</h3>
+          <div id="listBox"></div>
+          <div id="listBox"></div>
+          <div id="comments-view">
+
+          </div>
+        </fieldset>
+            
+    
+        </form>
+
+      <!-- <div>
         <div>
           <h4>Username:</h4>
         </div>
@@ -474,7 +507,7 @@
           <a href="#">Edit</a>
           <a href="#">Delete</a>
         </div>
-      </div>
+      </div> -->
 
       <!--add a comment button-->
       <a href="#" class="ui-btn">ADD A COMMENT</a>
@@ -538,40 +571,7 @@
           <label for="favourite1">Add Favourite</label>
         </fieldset> 
         
-        <button>Comment</button>
-
-        <!--Test-->
-      <!-- <div class="share-dialog">
-        <header>
-          <h3 class="dialog-title">Share</h3>
-          <button id="CloseShareBtn" onclick="show()" style="width: 80px; padding: 10px 6px;" class="close-button">Close</svg></button>
-        </header>
-        <div class="targets">
-          <a class="button">
-            <i class="fab fa-facebook"></i>
-            <span>Facebook</span>
-          </a>
-          
-          <a class="button">
-            <i class="fab fa-twitter"></i>
-            <span>Twitter</span>
-          </a>
-          
-          <a class="button">
-            <i class="fab fa-whatsapp"></i>
-            <span>Whatsapp</span>
-          </a>
-          
-          <a class="button">
-            <i class="far fa-envelope"></i>
-            <span>Email</span>
-          </a>
-        </div>
-       <div class="link">
-          <div class="pen-url">https://tla/poi#</div>
-          <button class="copy-link">Copy Link</button>
-        </div>
-      </div> -->
+        <a href="#comment"><button>Comment</button></a>
 
       <button id="shareBtn" onclick="hide()" class="share-button" type="button" title="Share this article">
         <span>Share</span>
@@ -829,6 +829,37 @@
     dots[slideIndex-1].className += " active";
   }
 </script>
+
+<script type="text/javascript">
+  function addOption() {
+    listBox.appendChild(new Option(inputBox.value,inputBox.value));
+    comments_view.appendChild(new Option(inputBox.value,inputBox.value));
+    inputBox.value = "";
+  }
+
+  function removeOption() {
+    listBox.options[listBox.selectedIndex] = null;
+  }
+
+  window.onload = function() {
+    hiddenFieldset = document.getElementById("hiddenFieldset");
+    inputBox = document.FormName.inputBox;
+    listBox = document.getElementById("listBox");
+    comments_view = document.getElementsById("comments-view")
+
+    // document.FormName.radiogroup[0].onclick = function() {
+    //   hiddenFieldset.style.display = "block";
+    // }
+    // document.FormName.radiogroup[1].onclick = function() {
+    //   hiddenFieldset.style.display = "none";
+    // }
+
+    // hiddenFieldset.style.display = "none";
+    document.getElementById("add").onclick = addOption;
+    document.getElementById("remove").onclick = removeOption;
+  }
+  
+  </script>
 
 <!-- <script>
   function hide() {

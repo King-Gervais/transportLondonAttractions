@@ -61,6 +61,7 @@ la*{
   margin-top: 10px;
 }
 
+
 .feature{
   margin-top: 50px;
   justify-content: center;
@@ -127,7 +128,7 @@ la*{
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
+  margin-top: -85px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -183,7 +184,7 @@ la*{
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Fading animation
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -199,7 +200,7 @@ la*{
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
-}
+} */
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -324,7 +325,13 @@ la*{
   margin: auto;
   padding: 5px;
 }
-
+/* this is for comment */
+#listBox{
+  width: 300px;
+  border: 2px solid blue;
+  /* padding: 50px; */
+  margin: 20px;
+}
 
 
 
