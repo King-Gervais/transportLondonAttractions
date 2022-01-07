@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar</title>
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+    <script src="../jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width"/>
+	
+	
+</head>
+<body>
+    <!-- This is the first page -->
+    <div id="firstpage" data-role="page">
+        <header data-role="header" data-position="fixed">
+          <h1>Header Bar</h1>
+          
+			<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button">Back</a>
+
+        </header>
+		
+        <div class="ui-content">
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:100%">
+					Block A
+					<ul data-role="listview" data-filter="true" data-filter-placeholder="Filter" item="true">
+						
+					<li data-role="list-divider">Monday list items</li>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2 </a></li>
+					<li><a href="#">Item 3 </a></li>
+					<li data-role="list-divider">Tuesday list items</li>
+					<li><a href="#">Item 1 </a></li>
+					<li><a href="#">Item 2 </a></li>
+					<li><a href="#">Item 3 </a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:100%; width:100%">
+				Block B<br>
+				Block B<br>
+				Block B<br>
+				Block B<br>
+				Block B<br>
+			</div>
+			</div>
+
+		</div><!-- /grid-c -->
+		
+		</div><!-- /rwd-example -->
+
+        <footer data-role="footer" data-position="fixed">
+          <nav data-role="navbar">
+            <ul>
+                <li><a href="#" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active ui-state-persist">Home</a></li>
+                <li><a href="#secondpage" class="ui-btn ui-icon-calendar ui-btn-icon-top ">Calendar</a></li>
+                <li><a href="#thirdpage" class="ui-btn ui-icon-clock ui-btn-icon-top">Time</a></li>
+            </ul>
+          </nav>
+          </footer>
+    </div>
+    
+
+    
+</body>
+</html>

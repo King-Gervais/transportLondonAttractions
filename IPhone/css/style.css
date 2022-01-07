@@ -144,8 +144,8 @@ la*{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev, .next {
+  background-color: rgba(0,0,0,0.6);
 }
 
 /* Caption text */
@@ -327,10 +327,9 @@ la*{
 }
 /* this is for comment */
 #listBox{
-  width: 300px;
-  border: 2px solid blue;
-  /* padding: 50px; */
-  margin: 20px;
+  border: 2px solid #dbdbdb;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 
