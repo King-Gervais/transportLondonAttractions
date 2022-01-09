@@ -20,6 +20,9 @@
   <script src="js/homepage.js"></script>
   <script src="js/booking.js"></script>
   
+  
+
+  
   <!--strip-->
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
@@ -67,14 +70,14 @@
         <div class="mySlides fade">
           <img style="width: 100%;" src="img/home/Image1.png">
             <div class="homecontent">
-              <h1 class="title">Transport London<br />Attractions</h1>
+              <h1 class="maintitle">Transport London<br />Attractions</h1>
               <h2 class="slogan">Adventure is for everyone!</h2>
               <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i class="fas fa-map-marker-alt"></i> icon to get started</h2>
 
               <h2 class="signinPrompt">Sign up now<br />for discounts and more...<h2>
               <div class="signupin">
-                <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
-                <a href="#" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
+                <a href="login.html#login" rel="external" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
+                <a href="register.html#register" rel="external" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
               </div>
             </div>
         </div>
@@ -125,7 +128,7 @@
           <a id="leftSwipe" class="next" onclick="plusSlides(1)">&#10095;</a>
               
 
-        <div style="text-align:center; position: absolute; bottom: 68px; left: 132px;  ">
+        <div class="navDots">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
@@ -177,7 +180,7 @@
 
       <div class="locationlists">
         <div data-role="collapsible" class="acol">
-          <h4>Man Made Attractions</h4>
+          <h4 class="attractionTitle">Man Made Attractions</h4>
 
           <!-- <ul data-role="listview" data-filter="true" data-filter-placeholder="Filter" item="true"></ul> -->
           <ul data-role="listview" data-filter="true" data-filter-placeholder="Filter" item="true">
@@ -204,7 +207,7 @@
         <br>
         
         <div data-role="collapsible" class="acol">
-          <h4>Natrual made attractions</h4>
+          <h4 class="attractionTitle">Natrual made attractions</h4>
 
           <ul data-role="listview" data-filter="true" data-filter-placeholder="Filter" item="true">
             <li><a style="display:flex;" href="#poi2">
@@ -289,7 +292,7 @@
 
     <div role="main" class="ui-content">
       <h1 style="text-align: center;">Favourite locations</h1>
-      <p style="text-align: center;">Tick the locations you wish to send and confirm</p>
+      <p style="text-align: center; padding-bottom: 35px;">Tick the locations you wish to send and confirm</p>
 
       <div id="favourite-content" class="favourite-content center grid" >
         <p style=" font-weight: bold; padding: 6px; text-align: center;">Your favourites list is empty </p>
@@ -300,6 +303,8 @@
         <a href="#location" class="ui-btn" style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">ADD LOCATIONS</a>
         <a href="#" onclick="remove()" class="ui-btn" style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">REMOVE</a>
         <a href="#" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-block;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;">SEND</a>
+
+      
       </div>
     </div>
 
@@ -342,10 +347,12 @@
         <form id="frmBooking" name="bookingForm" action="_self">
           <h1 class="center">Booking Details</h1>
           <!--Booking status-->
-
+          <div id="booking-name" class="booking-content center grid" >
+            <p style=" font-weight: bold; padding: 6px; text-align: center;">booking empty </p>
+          </div>
           <!--Location-->
-          <div>
-            <div class="center"><img src="" alt="location_image"></div>
+          <div >
+            <div id="image" style="width:100px"></div>
             <input id="item_name" name="item_name" type="text" value="Name of Location">
           </div>
 
@@ -385,7 +392,7 @@
         <a href="#" class="ui-btn">GO TO NEXT STEP</a>
 
         <!-- <input id="total_value" name="total_value" type="text" value="500"> -->
-        <button id="customButton">Purchase</button>
+        <button id="customButton" onclick="Addbp();">Purchase</button>
         </form>
 
         <div align="center" id="thankyouPayment"></div>
@@ -448,9 +455,19 @@
         <a href="#" class="ui-btn">Make Changes</a>
 
         <h3>Current points</h3>
+        <p id="score"></p>
         <h3>Milestones</h3>
+        <p id="info"></p>
+        <!-- <button onclick="ViewDiscount()">View Milestone rewards</button> -->
+        <p id="M1"></p>
 
-        <a href="#" class="ui-btn">Claim Discount</a>
+        <!-- <a href="#" class="ui-btn">Claim Discount</a> -->
+        <div class="discounts">
+          <p class="discount" id="D1">Claim with 10 BP<button onclick="ClaimDiscount(10)">CLAIM</button></p>
+          <p class="discount" id="D2">Claim with 15 BP<button onclick="ClaimDiscount(15)">CLAIM</button></p>
+          <p class="discount" id="D3">Claim with 20 BP<button onclick="ClaimDiscount(20)">CLAIM</button></p>
+          <p class="discount" id="D4">Claim with 30 BP<button onclick="ClaimDiscount(30)">CLAIM</button></p>
+        </div>
         <a href="#" class="ui-btn">Sign out</a>
     </div>
 
@@ -586,7 +603,7 @@
           <label for="favourite1">Add Favourite</label>
         </fieldset> 
         
-        <a href="#comment"><button>Comment</button></a>
+        <!-- <a href="#comment"><button>Comment</button></a> -->
 
       <button id="shareBtn" onclick="hide()" class="share-button" type="button" title="Share this article">
         <span>Share</span>
@@ -609,7 +626,7 @@
           <input type="text" name="inputBox" id="inputBox" placeholder="Text input" value="">
         </div>	
         <button id="add" type="button">Add</button>
-        <button id="remove" type="button">Remove</button>
+        <button onclick="deleteComment()" id="remove" type="button">Remove</button>
         
       </fieldset>
           
@@ -646,12 +663,20 @@
       
       <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
       <div class="information-button center grid">
-        <a href="ARpage.html" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span class="material-icons" style="display: inline-block;">photo_camera
+        <a href="ARpage_text.html" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span class="material-icons" style="display: inline-block;">photo_camera
         </span> OPEN CAMERA TO SCAN QR CODE</a>
         
-        <a href="#" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons"> add
+        
+<button class="ui-btn" onclick="f1();"> Book location </button>
+
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          
+          <a href="#booking"  style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons"> add
         </span> MAKE A BOOKING</a>
-      </div>
+        <input type="checkbox" class="actionbtn" name="location1" id="location1">
+          <label for="location1">Add Bookings</label>
+        </fieldset> 
+        </div>
 
     </div>
     
@@ -874,7 +899,7 @@
   }
 
   function removeOption() {
-    listBox.options[listBox.selectedIndex] = null;
+    $('#listBox').find('option[value]').remove();
   }
 
   window.onload = function() {
@@ -882,39 +907,14 @@
     inputBox = document.FormName.inputBox;
     listBox = document.getElementById("listBox");
 
-    // document.FormName.radiogroup[0].onclick = function() {
-    //   hiddenFieldset.style.display = "block";
-    // }
-    // document.FormName.radiogroup[1].onclick = function() {
-    //   hiddenFieldset.style.display = "none";
-    // }
-
-    // hiddenFieldset.style.display = "none";
+    
     document.getElementById("add").onclick = addOption;
     document.getElementById("remove").onclick = removeOption;
   }
   
   </script>
 
-<!-- <script>
-  function hide() {
-    var x = document.getElementById("shareBtn");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
 
-  function show(){
-    var y =  document.getElementById("shareBtn");
-    if(y.style.display ==="block"){
-      y.style.display = "none"
-    }else {
-      y.style.display = "block";
-    }
-  }
-</script> -->
 
 <script>
 //   $(document).ready(function() {
@@ -927,6 +927,92 @@
 // });
 </script>
 
+<script>
+  $(document).on( 'pagecontainerbeforehide', 'body', function( event, ui)
+    {
+    function f1(){
+      document.getElementById('location1').checked = true;
+    }
+    //do something
+    if ( ui.nextPage.attr('id')== "booking") {
+        $("#booking-name").html ("");
+
+    
+      if ($( "#location1" ).is( ":checked" )) {
+        $("#booking-name").append("<p>The National Gallery</p>");
+        $("#image").append("<img src='img/poi1.png' alt='The National Gallery' style=''>");
+      }    
+
+      if ($( "#location2" ).is( ":checked" )) {
+          $("#booking-name").append("<p>Primrose hill</p>");
+        }
+    }
+    });
+    
+      
+</script>
+
+<script>
+  var currentbp = 20;
+  document.getElementById("score").innerHTML = currentbp+" Booking Points";
+
+  function Addbp(){
+    currentbp += 5;
+    document.getElementById("score").innerHTML = currentbp+" Booking Points";
+  }
+
+  function update(){
+    document.getElementById("score").innerHTML = currentbp+" Booking Points";
+  }
+
+  function ViewDiscount(){
+    if(currentbp >10){
+      document.getElementById("D1").innerHTML = "No Milestones reached" ;
+    }
+    if(currentbp>=10){
+      document.getElementById("D1").innerHTML = "Milestone 1 reached";
+    }else{
+      document.getElementById("D1").innerHTML = "Milestone not reached";
+    }
+    if(currentbp>=15){
+      document.getElementById("D2").innerHTML = "Milestone 2 reached";
+    }else{
+      document.getElementById("D2").innerHTML = "Milestone not reached";
+    }
+    if(currentbp>=20){
+      document.getElementById("D3").innerHTML = "Milestone 3 reached";
+    }else{
+      document.getElementById("D3").innerHTML = "Milestone not reached";
+    }
+    if(currentbp>=30){
+      document.getElementById("D4").innerHTML = "Milestone 4 reached";
+    }else{
+      document.getElementById("D4").innerHTML = "Milestone not reached";
+    }
+  }
+
+  function ClaimDiscount(bp){
+    if(currentbp>=bp){
+      currentbp = currentbp - bp;
+      update();
+      document.getElementById("D1").innerHTML = "Claimed - Code: TFUT-FVUG-BWBK-IONR" ;
+    }else if(currentbp>=bp){
+      currentbp = currentbp - bp;
+      update();
+      document.getElementById("D2").innerHTML = "Claimed - Code: TSUN-UNDU-OVOB-SJKI" ;
+    }else if(currentbp>=bp){
+      currentbp = currentbp - bp;
+      update();
+      document.getElementById("D3").innerHTML = "Claimed - Code: TJDN-JNCO-UABO-DFDH" ;
+    }else if(currentbp>=bp){
+      currentbp = currentbp - bp;
+      update();
+      document.getElementById("D4").innerHTML = "Claimed - Code: BYGN-RUHN-FUNH-GRIL" ;
+    }else{
+      document.getElementById("info").innerHTML = "More bp required" ;
+    }
+  }
+</script>
 
 </body>
   <script src="js/scripts.js"></script>
