@@ -19,10 +19,10 @@
   <script src="js/map.js"></script>
   <script src="js/homepage.js"></script>
   <script src="js/booking.js"></script>
-  
-  
 
-  
+
+
+
   <!--strip-->
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
@@ -30,25 +30,26 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!--Google Maps-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4fxzjh0_9j9aIXCecrSeDxBztKU5Lzao&callback=initMap" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4fxzjh0_9j9aIXCecrSeDxBztKU5Lzao&callback=initMap"
+    defer></script>
 
 
 
   <script>
     $(document).on('pagecreate', function (evt) {
-        
-        $("#slideContent").on("swiperight", function (e) {
-  
-            console.log("you swiped right!");
-            // alert("you swiped right!");
-            $("#rightSwipe").click();
-        });
-  
-        $("#slideContent").on("swipeleft", function (e) {
-          console.log("you swiped left!");
-            // alert("you swiped left!");
-            $("#leftSwipe").click();
-        });
+
+      $("#slideContent").on("swiperight", function (e) {
+
+        console.log("you swiped right!");
+        // alert("you swiped right!");
+        $("#rightSwipe").click();
+      });
+
+      $("#slideContent").on("swipeleft", function (e) {
+        console.log("you swiped left!");
+        // alert("you swiped left!");
+        $("#leftSwipe").click();
+      });
     });
   </script>
 
@@ -58,7 +59,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!-- This is home-->
   <div data-role="page" id="home" style="background-color:rgb(255, 255, 255); padding-bottom: 0 !important;">
-    <header data-role="header" style="display: flex; justify-content: center; position: fixed; width: 100vw; background-color: transparent; border: transparent; z-index: 999;">
+    <header data-role="header"
+      style="display: flex; justify-content: center; position: fixed; width: 100vw; background-color: transparent; border: transparent; z-index: 999;">
       <!-- <img src="img/logo.png" alt="TLA Logo" width="110px" height="70px"> -->
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </header>
@@ -66,20 +68,24 @@
     <!-- this is the the slideshow for the home page -->
     <div class="ui-content" style="padding:0;">
       <div id="slideContent" class="slideshow-container">
-        
+
         <div class="mySlides fade">
           <img style="width: 100%;" src="img/home/Image1.png">
-            <div class="homecontent">
-              <h1 class="maintitle">Transport London<br />Attractions</h1>
-              <h2 class="slogan">Adventure is for everyone!</h2>
-              <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i class="fas fa-map-marker-alt"></i> icon to get started</h2>
+          <div class="homecontent">
+            <h1 class="maintitle">Transport London<br />Attractions</h1>
+            <h2 class="slogan">Adventure is for everyone!</h2>
+            <h2 class="desc">Book tickets to view the various <br /> attractions in London. Select the <br /> <i
+                class="fas fa-map-marker-alt"></i> icon to get started</h2>
 
-              <h2 class="signinPrompt">Sign up now<br />for discounts and more...<h2>
-              <div class="signupin">
-                <a href="login.html#login" rel="external" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign in</a>
-                <a href="register.html#register" rel="external" class="ui-btn" style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
-              </div>
-            </div>
+            <h2 class="signinPrompt">Sign up now<br />for discounts and more...<h2>
+                <div class="signupin">
+                  <a href="login.html#login" rel="external" class="ui-btn"
+                    style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal; margin-right:20px;">Sign
+                    in</a>
+                  <a href="register.html#register" rel="external" class="ui-btn"
+                    style="width: 1000px; font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">Register</a>
+                </div>
+          </div>
         </div>
 
         <div id="here" class="mySlides fade">
@@ -122,11 +128,11 @@
           </div>
         </div>
 
-        
-          <a id="rightSwipe" class="prev" onclick="plusSlides(-1)">&#10094;</a>  
-      
-          <a id="leftSwipe" class="next" onclick="plusSlides(1)">&#10095;</a>
-              
+
+        <a id="rightSwipe" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+        <a id="leftSwipe" class="next" onclick="plusSlides(1)">&#10095;</a>
+
 
         <div class="navDots">
           <span class="dot" onclick="currentSlide(1)"></span>
@@ -136,7 +142,7 @@
           <span class="dot" onclick="currentSlide(5)"></span>
         </div>
       </div>
-      
+
     </div>
 
     <!-- this is the footer -->
@@ -170,7 +176,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!-- This is location page-->
   <div data-role="page" id="location">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
@@ -187,11 +194,12 @@
             <li style="height: 85px;">
               <a style="display:flex;" href="#poi">
                 <div>
-                  <img style="width: 100px;" src="img/poi1.png" alt="The National Gallery" style=" margin: auto; display: flex;">
+                  <img style="width: 100px;" src="img/poi1.png" alt="The National Gallery"
+                    style=" margin: auto; display: flex;">
                 </div>
 
-                <div style="position: relative; left: 20px; top: 20px;"> 
-                  The National Gallery 
+                <div style="position: relative; left: 20px; top: 20px;">
+                  The National Gallery
                 </div>
               </a>
             </li>
@@ -203,20 +211,21 @@
             <li><a href="#">London Aquarium</a></li>
           </ul>
         </div>
-        
+
         <br>
-        
+
         <div data-role="collapsible" class="acol">
           <h4 class="attractionTitle">Natrual made attractions</h4>
 
           <ul data-role="listview" data-filter="true" data-filter-placeholder="Filter" item="true">
             <li><a style="display:flex;" href="#poi2">
-              <div>
-                <img style="width: 100px;" src="img/Primrose-Hill.png" alt="The National Gallery" style=" margin: auto; display: flex;">
-              </div>
-              <div style="position: relative; left: 20px; top: 20px;"> 
-                Primrose Hill
-              </div>
+                <div>
+                  <img style="width: 100px;" src="img/Primrose-Hill.png" alt="The National Gallery"
+                    style=" margin: auto; display: flex;">
+                </div>
+                <div style="position: relative; left: 20px; top: 20px;">
+                  Primrose Hill
+                </div>
               </a></li>
             <li><a href="#">The Regent’s Garden</a></li>
             <li><a href="#">Hyde Park</a></li>
@@ -225,7 +234,7 @@
             <li><a href="#">St. James’s Park</a></li>
           </ul>
         </div>
-        
+
         <!-- <br>
         
         <div data-role="collapsible" class="acol">
@@ -286,7 +295,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is Favourite page-->
   <div data-role="page" id="favourite">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
@@ -294,17 +304,38 @@
       <h1 style="text-align: center;">Favourite locations</h1>
       <p style="text-align: center; padding-bottom: 35px;">Tick the locations you wish to send and confirm</p>
 
-      <div id="favourite-content" class="favourite-content center grid" >
+      <div id="favourite-content" class="favourite-content center grid">
         <p style=" font-weight: bold; padding: 6px; text-align: center;">Your favourites list is empty </p>
       </div>
 
-    
-      <div class="favouriteAddRemove center grid">
-        <a href="#location" class="ui-btn" style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">ADD LOCATIONS</a>
-        <a href="#" onclick="remove()" class="ui-btn" style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">REMOVE</a>
-        <a href="#" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-block;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;">SEND</a>
 
-      
+      <div class="favouriteAddRemove center grid">
+        <a href="#location" class="ui-btn"
+          style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">ADD
+          LOCATIONS</a>
+        <a href="#" onclick="remove()" class="ui-btn"
+          style="font-weight: lighter;color: white; display: inline-block; background-color: #652CB3; border: 0; border-radius: 5px; font-style: normal;">REMOVE</a>
+        <a rel="external" class="ui-btn"
+          style="font-weight: lighter;color: white;display: inline-block;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"
+          onclick="sendMail()">SEND</a>
+
+        <!-- <div class="email-links">
+          <div class="email-link">
+            <h2>Body Text</h2>
+            <div>
+              <p>
+                <a href="mailto:w1751526@my.westminster.ac.uk?cc=&bcc=&subject=Favourite%20Lists&body=Body-goes-here">
+                  <svg viewBox="0 0 512 512" width="20" fill="#ffffff" title="envelope">
+                    <path
+                      d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                  </svg>Email Us
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div> -->
+
       </div>
     </div>
 
@@ -338,25 +369,35 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is Booking page-->
   <div data-role="page" id="booking">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
       <div>
         <form id="frmBooking" name="bookingForm" action="_self">
+
           <h1 class="center">Booking Details</h1>
-          <!--Booking status-->
-          <div id="booking-name" class="booking-content center grid" >
+
+          <!--Booking status/name-->
+          <div id="booking-name" class="booking-content center grid">
             <p style=" font-weight: bold; padding: 6px; text-align: center;">booking empty </p>
           </div>
-          <!--Location-->
-          <div >
-            <div id="image" style="width:100px"></div>
-            <input id="item_name" name="item_name" type="text" value="Name of Location">
+
+          <!--Location Image-->
+          <div>
+            <div id="image"></div>
           </div>
 
-          <a href="#" class="ui-btn">Go TO NEXT STEP</a>
+      </div>
+
+      <div class="timedate">
+        <form action="/action_page.php">
+          <label style="padding-top: 20px;" for="bookingtime">Booking (date and time):</label>
+          <input type="datetime-local" id="bookingtime" name="bookingtime">
+          <!-- <input type="submit"> -->
+        </form>
       </div>
 
       <div>
@@ -364,16 +405,18 @@
         <!--Booking status-->
         <label for="child">Child:</label>
         <select id="child" name="child">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option id="total_value1" name="total_value1" value="11000">5 (£11000)</option>
+          <option value="0">None</option>
+          <option id="total_value1" name="total_value1" value="10">1 (£10)</option>
+          <option id="total_value2" name="total_value2" value="20">2 (£20)</option>
+          <option id="total_value3" name="total_value3" value="30">3 (£30)</option>
+          <option id="total_value4" name="total_value4" value="40">4 (£40)</option>
+          <option id="total_value5" name="total_value5" value="50">5 (£50)</option>
         </select>
 
         <label for="adult">Adult:</label>
         <select id="adult" name="adult">
-          <option value="1">1</option>
+          <option value="0">None</option>
+          <option id="total_value6" name="total_value6" value="20">1 (£20)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
@@ -389,16 +432,17 @@
 
         <label for="discount">Discount:</label>
         <input type="text" name="discount" id="discount" value="" placeholder="discount code" />
-        <a href="#" class="ui-btn">GO TO NEXT STEP</a>
 
         <!-- <input id="total_value" name="total_value" type="text" value="500"> -->
-        <button id="customButton" onclick="Addbp();">Purchase</button>
+        <div style="padding-top: 20px;">
+          <button id="customButton" onclick="Addbp();">Purchase</button>
+        </div>
         </form>
 
         <div align="center" id="thankyouPayment"></div>
       </div>
     </div>
-    
+
     <!-- this is the footer -->
     <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
@@ -431,44 +475,61 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is Account page-->
   <div data-role="page" id="account">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
 
     <div role="main" class="ui-content">
       <h1 class="center">My Account</h1>
-        <div class="center">
-          <img src="img/icons/profile.png" alt="profile picture">
-        </div>
+      <div class="center">
+        <img src="img/icons/profile.png" alt="profile picture">
+      </div>
 
-        <fieldset class="ui-field-contain">
-          <label for="f_name">First Name:</label>
-          <input type="text" name="f_name" id="f_name" value="" placeholder="first name" />
-          <label for="l_name">Last Name:</label>
-          <input type="text" name="l_name" id="l_name" value="" placeholder="last name" />
-          <label for="email">Email: </label>
-          <input type="email" name="email" id="email" value="" placeholder="email" />
-          <label for="password">Password: </label>
-          <input type="password" name="password" id="password" value="" placeholder="password" />
-        </fieldset>
+      <fieldset class="ui-field-contain">
+        <label for="f_name">First Name:</label>
+        <input type="text" name="f_name" id="f_name" value="" placeholder="first name" />
+        <label for="l_name">Last Name:</label>
+        <input type="text" name="l_name" id="l_name" value="" placeholder="last name" />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" value="" placeholder="email" />
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" value="" placeholder="password" />
+      </fieldset>
 
-        <a href="#" class="ui-btn">Make Changes</a>
+      <a style="background-color: #652cb3 !important; font-weight: lighter !important; color: white !important; border: 0; border-radius: 5px; font-style: normal;"
+        href="#" class="ui-btn">Make Changes</a>
 
+      <div style="text-align: center;padding-top: 10px;padding-bottom: 8px;">
         <h3>Current points</h3>
         <p id="score"></p>
-        <h3>Milestones</h3>
-        <p id="info"></p>
-        <!-- <button onclick="ViewDiscount()">View Milestone rewards</button> -->
-        <p id="M1"></p>
+      </div>
 
-        <!-- <a href="#" class="ui-btn">Claim Discount</a> -->
-        <div class="discounts">
+      <h3>Milestones</h3>
+      <p id="info"></p>
+      <!-- <button onclick="ViewDiscount()">View Milestone rewards</button> -->
+      <p id="M1"></p>
+
+      <!-- <a href="#" class="ui-btn">Claim Discount</a> -->
+      <div class="discounts">
+        <div>
           <p class="discount" id="D1">Claim with 10 BP<button onclick="ClaimDiscount(10)">CLAIM</button></p>
+        </div>
+
+        <div>
           <p class="discount" id="D2">Claim with 15 BP<button onclick="ClaimDiscount(15)">CLAIM</button></p>
+        </div>
+
+        <div>
           <p class="discount" id="D3">Claim with 20 BP<button onclick="ClaimDiscount(20)">CLAIM</button></p>
+        </div>
+
+        <div>
           <p class="discount" id="D4">Claim with 30 BP<button onclick="ClaimDiscount(30)">CLAIM</button></p>
         </div>
-        <a href="#" class="ui-btn">Sign out</a>
+
+      </div>
+      <a id="signoutbtn" href="#" class="ui-btn">Sign out</a>
     </div>
 
     <!-- this is the footer -->
@@ -503,7 +564,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is Comment page-->
   <div data-role="page" id="comment">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
@@ -577,7 +639,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is POI page-->
   <div data-role="page" id="poi">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
@@ -587,11 +650,12 @@
 
       <div class="information-into grid">
         <img src="img/poi1.png" alt="The National Gallery" style=" margin: auto; display: flex;">
-        
+
       </div>
-      
+
       <div class="information-text grid">
-        <p style="text-align: justify;">The National Gallery is an art museum which was founded within 1824. The National Gallery is located within
+        <p style="text-align: justify;">The National Gallery is an art museum which was founded within 1824. The
+          National Gallery is located within
           Trafalgar Square, which is within the City of Westminster. The gallery houses over 2,300 paintings, from the
           mid-13th century to 1900.
         </p>
@@ -600,45 +664,54 @@
       <div style="width:100%">
         <fieldset data-role="controlgroup" data-type="horizontal">
           <input type="checkbox" class="actionbtn" name="favourite1" id="favourite1">
-          <label for="favourite1">Add Favourite</label>
-        </fieldset> 
-        
+          <label id="fav1" style="text-align: center;" class="fav" for="favourite1">Add Favourite</label>
+        </fieldset>
+
         <!-- <a href="#comment"><button>Comment</button></a> -->
 
-      <button id="shareBtn" onclick="hide()" class="share-button" type="button" title="Share this article">
-        <span>Share</span>
-      </button>
+        <button
+          style="background-color: #652cb3 !important;font-weight: lighter !important;color: white !important;border: 0;border-radius: 5px;font-style: normal;"
+          id="shareBtn" onclick="hide()" class="share-button share1" type="button" title="Share this article">
+          <span>Share</span>
+        </button>
 
-    </div>
-    <!--Start test-->
-    
-    <form id="FormName" action="(EmptyReference!)" method="get" name="FormName">
-      
-    
-    <!--Adjust your code so the comments are displayed nicely styled. Make sure you overide old comments. See how you can grap the comments from this page and make it appear in the page with the Detailed Point of Intereset Pages-->
-  
-    
-      <fieldset id="hiddenFieldset">
-        <h3>Comments</h3>
-        <div id="listBox"><p>Emily: I found the national gallery to be very informative</p></div>
-        <div class="ui-field-contain">
-          <label for="inputBox">Add comment below:</label>
-          <input type="text" name="inputBox" id="inputBox" placeholder="Text input" value="">
-        </div>	
-        <button id="add" type="button">Add</button>
-        <button onclick="deleteComment()" id="remove" type="button">Remove</button>
-        
-      </fieldset>
-          
-  
+      </div>
+      <!--Start test-->
+
+      <form id="FormName" action="(EmptyReference!)" method="get" name="FormName">
+
+
+        <!--Adjust your code so the comments are displayed nicely styled. Make sure you overide old comments. See how you can grap the comments from this page and make it appear in the page with the Detailed Point of Intereset Pages-->
+
+
+        <fieldset id="hiddenFieldset">
+          <h3>Comments</h3>
+          <div id="listBox">
+            <p>Emily: I found the national gallery to be very informative</p>
+          </div>
+          <div class="ui-field-contain">
+            <label for="inputBox">Add comment below:</label>
+            <input type="text" name="inputBox" id="inputBox" placeholder="Text input" value="">
+          </div>
+          <button
+            style="background-color: #652cb3 !important;font-weight: lighter !important;color: white !important;border: 0;border-radius: 5px;font-style: normal;"
+            id="add" type="button">Add</button>
+          <button
+            style="background-color: #652cb3 !important;font-weight: lighter !important;color: white !important;border: 0;border-radius: 5px;font-style: normal;"
+            onclick="deleteComment()" id="remove" type="button">Remove</button>
+
+        </fieldset>
+
+
       </form>
-    <!--End test-->
-      
+      <!--End test-->
+
 
       <div class="information-video center grid">
-        <iframe margin= "0 auto" width="100%" height="300" src="https://www.youtube.com/embed/qKXTHkZa15I" frameborder="1" allowfullscreen></iframe>
+        <iframe margin="0 auto" width="100%" height="300" src="https://www.youtube.com/embed/qKXTHkZa15I"
+          frameborder="1" allowfullscreen></iframe>
       </div>
-      
+
       <div>
         <h3 style="text-align: center; font-size: inherit;margin-top: 32px;"> Give a rating </h3>
 
@@ -660,60 +733,66 @@
         <!--Google maps integration-->
         <div id="map" class="information-map center grid"></div>
       </div>
-      
-      <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
+
+      <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist
+        attraction to earn points and get more information</h3>
       <div class="information-button center grid">
-        <a href="ARpage_text.html" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span class="material-icons" style="display: inline-block;">photo_camera
-        </span> OPEN CAMERA TO SCAN QR CODE</a>
-        
-        
-<button class="ui-btn" onclick="f1();"> Book location </button>
+        <a href="ARpage_text.html" rel="external" class="ui-btn"
+          style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span
+            class="material-icons" style="display: inline-block;">photo_camera
+          </span> OPEN CAMERA TO SCAN QR CODE</a>
 
         <fieldset data-role="controlgroup" data-type="horizontal">
-          
-          <a href="#booking"  style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons"> add
-        </span> MAKE A BOOKING</a>
-        <input type="checkbox" class="actionbtn" name="location1" id="location1">
-          <label for="location1">Add Bookings</label>
-        </fieldset> 
-        </div>
+
+          <!-- <a href="#booking"
+            style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span
+              class="material-icons"> add
+            </span> MAKE A BOOKING</a> -->
+          <input type="checkbox" class="actionbtn" name="location1" id="location1">
+          <label style="text-align: center;" class="addbookins" for="location1">Add Bookings</label>
+        </fieldset>
+      </div>
 
     </div>
-    
+
     <!-- this is the footer -->
     <div data-role="footer" data-position="fixed" style="position: fixed;">
-      
-      <nav data-role="navbar"><div class="share-dialog">
-        <header>
-          <h3 class="dialog-title">Share</h3>
-          <button id="CloseShareBtn" onclick="show()" style="width: 80px; padding: 10px 6px; background-color: #652CB3; color: white;" class="close-button">Close</svg></button>
-        </header>
-        <div class="targets">
-          <a class="button" href="https://www.facebook.com">
-            <i class="fab fa-facebook"></i>
-            <span>Facebook</span>
-          </a>
-          
-          <a class="button" href="https://twitter.com/home">
-            <i class="fab fa-twitter"></i>
-            <span>Twitter</span>
-          </a>
-          
-          <a class="button" href="https://web.whatsapp.com">
-            <i class="fab fa-whatsapp"></i>
-            <span>Whatsapp</span>
-          </a>
-          
-          <a class="button" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiW1NOHvtr0AhVKY8AKHfu9Bz4QjBB6BAgNEAE&url=https%3A%2F%2Fgmail.google.com%2Finbox%2F&usg=AOvVaw0ZEKMYWSO1FGP05FQnsY9S">
-            <i class="far fa-envelope"></i>
-            <span>Email</span>
-          </a>
-        </div>
-        <!-- <div class="link">
+
+      <nav data-role="navbar">
+        <div class="share-dialog">
+          <header>
+            <h3 class="dialog-title">Share</h3>
+            <button id="CloseShareBtn" onclick="show()"
+              style="width: 80px; padding: 10px 6px; background-color: #652CB3; color: white;"
+              class="close-button">Close</svg></button>
+          </header>
+          <div class="targets">
+            <a class="button" href="https://www.facebook.com">
+              <i class="fab fa-facebook"></i>
+              <span>Facebook</span>
+            </a>
+
+            <a class="button" href="https://twitter.com/home">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
+
+            <a class="button" href="https://web.whatsapp.com">
+              <i class="fab fa-whatsapp"></i>
+              <span>Whatsapp</span>
+            </a>
+
+            <a class="button"
+              href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiW1NOHvtr0AhVKY8AKHfu9Bz4QjBB6BAgNEAE&url=https%3A%2F%2Fgmail.google.com%2Finbox%2F&usg=AOvVaw0ZEKMYWSO1FGP05FQnsY9S">
+              <i class="far fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+          <!-- <div class="link">
           <div class="pen-url">https://tla/poi#</div>
           <button class="copy-link">Copy Link</button>
         </div> -->
-      </div>
+        </div>
         <ul>
           <li><a href="#home"><span style="font-size: 2em; color: black;">
                 <i class="fas fa-home"></i>
@@ -742,7 +821,8 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <!--This is POI page2-->
   <div data-role="page" id="poi2">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
       <img src="img/logo.png" alt="TLA Logo" style="width: 105px">
     </div>
@@ -756,31 +836,34 @@
         <fieldset data-role="controlgroup" data-type="horizontal">
           <input type="checkbox" name="favourite2" id="favourite2" class="custom">
           <label for="favourite2"><span class="ui-icon-star ui-btn-icon-left">Add to favourites</span></label>
-        </fieldset> 
+        </fieldset>
 
         <div>
-          Favourite: 
+          Favourite:
           <a href="#"><span class="material-icons" style="color: #a7a7a7;"> favorite </span></a>
 
-          Comments: 
+          Comments:
           <a href="#comment"><span class="material-icons" style="color: #a7a7a7;">comment</span></a>
 
           Share:
           <a href="#"><span class="material-icons" style="color: #a7a7a7;">share</span></a>
-        </div>  
+        </div>
       </div>
-      
+
       <div class="information-text grid">
         <p style="text-align: justify;">
-          Primrose Hill is a Grade II listed public park located north of Regent's Park in London, England, first opened to the public in 1842.
-           ... It was named after the 64 metres (210 ft) natural hill in the centre of the park, the second highest natural point in the London Borough of Camden.
+          Primrose Hill is a Grade II listed public park located north of Regent's Park in London, England, first opened
+          to the public in 1842.
+          ... It was named after the 64 metres (210 ft) natural hill in the centre of the park, the second highest
+          natural point in the London Borough of Camden.
         </p>
       </div>
 
       <div class="information-video center grid">
-        <iframe margin= "0 auto" width="100%" height="300" src="https://www.youtube.com/embed/CtM_5WZ7PbA" frameborder="1" allowfullscreen></iframe>
+        <iframe margin="0 auto" width="100%" height="300" src="https://www.youtube.com/embed/CtM_5WZ7PbA"
+          frameborder="1" allowfullscreen></iframe>
       </div>
-      
+
       <div>
         <h3 style="text-align: center; font-size: inherit;margin-top: 32px;"> Give a rating </h3>
 
@@ -802,14 +885,19 @@
         <!--Google maps integration-->
         <div id="map" class="information-map center grid"></div>
       </div>
-      
-      <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist attraction to earn points and get more information</h3>
+
+      <h3 style="text-align: center; padding: 20px; font-size: inherit;">Scan a QR code when you reach this tourist
+        attraction to earn points and get more information</h3>
       <div class="information-button center grid">
-        <a href="ARpage.html" rel="external" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span class="material-icons" style="display: inline-block;">photo_camera
-        </span> OPEN CAMERA TO SCAN QR CODE</a>
-        
-        <a href="#" class="ui-btn" style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span class="material-icons"> add
-        </span> MAKE A BOOKING</a>
+        <a href="ARpage.html" rel="external" class="ui-btn"
+          style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;"><span
+            class="material-icons" style="display: inline-block;">photo_camera
+          </span> OPEN CAMERA TO SCAN QR CODE</a>
+
+        <a href="#" class="ui-btn"
+          style="font-weight: lighter;color: white;display: inline-grid;background-color: #652CB3;border: 0;border-radius: 5px;font-style: normal;padding: 15px;"><span
+            class="material-icons"> add
+          </span> MAKE A BOOKING</a>
       </div>
     </div>
 
@@ -841,179 +929,154 @@
     </div>
   </div>
 
-<!-- this is for the caroussel -->
-<script>
-  // var slideIndex = 0;
-  // showSlides();
+  <!-- this is for the caroussel -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-  // function showSlides() {
-  //   var i;
-  //   var slides = document.getElementsByClassName("mySlides");
-  //   var dots = document.getElementsByClassName("dot");
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-  //   slideIndex++;
-  //   if (slideIndex > slides.length) { slideIndex = 1 }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
-  //   slides[slideIndex - 1].style.display = "block";
-  //   dots[slideIndex - 1].className += " active";
-  //   setTimeout(showSlides, 5000); // Change image every 2 seconds
-  // }
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
+      }
+      for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-</script>
-
-<script type="text/javascript">
-  function addOption() {
-    listBox.appendChild(new Option("You: "+inputBox.value,inputBox.value));
-    inputBox.value = "";
-  }
-
-  function removeOption() {
-    $('#listBox').find('option[value]').remove();
-  }
-
-  window.onload = function() {
-    hiddenFieldset = document.getElementById("hiddenFieldset");
-    inputBox = document.FormName.inputBox;
-    listBox = document.getElementById("listBox");
-
-    
-    document.getElementById("add").onclick = addOption;
-    document.getElementById("remove").onclick = removeOption;
-  }
-  
   </script>
 
-
-
-<script>
-//   $(document).ready(function() {
-//     $('#bt1').click(function() {
-//         $('#fr1').attr('action',
-//                        'mailto:w1735205@my.westminster.ac.uk?subject=' +
-//                        $('#tb1').val() + '&body=' + $('#tb2').val());
-//         $('#fr1').submit();
-//     });
-// });
-</script>
-
-<script>
-  $(document).on( 'pagecontainerbeforehide', 'body', function( event, ui)
-    {
-    function f1(){
-      document.getElementById('location1').checked = true;
+  <script type="text/javascript">
+    function addOption() {
+      listBox.appendChild(new Option("You: " + inputBox.value, inputBox.value));
+      inputBox.value = "";
     }
-    //do something
-    if ( ui.nextPage.attr('id')== "booking") {
-        $("#booking-name").html ("");
 
-    
-      if ($( "#location1" ).is( ":checked" )) {
-        $("#booking-name").append("<p>The National Gallery</p>");
-        $("#image").append("<img src='img/poi1.png' alt='The National Gallery' style=''>");
-      }    
+    function removeOption() {
+      $('#listBox').find('option[value]').remove();
+    }
 
-      if ($( "#location2" ).is( ":checked" )) {
+    window.onload = function () {
+      hiddenFieldset = document.getElementById("hiddenFieldset");
+      inputBox = document.FormName.inputBox;
+      listBox = document.getElementById("listBox");
+
+
+      document.getElementById("add").onclick = addOption;
+      document.getElementById("remove").onclick = removeOption;
+    }
+
+  </script>
+
+  <script>
+    $(document).on('pagecontainerbeforehide', 'body', function (event, ui) {
+      function f1() {
+        document.getElementById('location1').checked = true;
+      }
+      //do something
+      if (ui.nextPage.attr('id') == "booking") {
+        $("#booking-name").html("");
+
+
+        if ($("#location1").is(":checked")) {
+          $("#booking-name").append("<p class='bookingname'>The National Gallery</p>");
+          $("#image").append("<img style='width: 345px;' src='img/poi1.png' alt='The National Gallery' style=''>");
+        }
+
+        if ($("#location2").is(":checked")) {
           $("#booking-name").append("<p>Primrose hill</p>");
         }
-    }
+      }
     });
-    
-      
-</script>
 
-<script>
-  var currentbp = 20;
-  document.getElementById("score").innerHTML = currentbp+" Booking Points";
 
-  function Addbp(){
-    currentbp += 5;
-    document.getElementById("score").innerHTML = currentbp+" Booking Points";
-  }
+  </script>
 
-  function update(){
-    document.getElementById("score").innerHTML = currentbp+" Booking Points";
-  }
+  <script>
+    var currentbp = 20;
+    document.getElementById("score").innerHTML = currentbp + " Booking Points";
 
-  function ViewDiscount(){
-    if(currentbp >10){
-      document.getElementById("D1").innerHTML = "No Milestones reached" ;
+    function Addbp() {
+      currentbp += 5;
+      document.getElementById("score").innerHTML = currentbp + " Booking Points";
     }
-    if(currentbp>=10){
-      document.getElementById("D1").innerHTML = "Milestone 1 reached";
-    }else{
-      document.getElementById("D1").innerHTML = "Milestone not reached";
-    }
-    if(currentbp>=15){
-      document.getElementById("D2").innerHTML = "Milestone 2 reached";
-    }else{
-      document.getElementById("D2").innerHTML = "Milestone not reached";
-    }
-    if(currentbp>=20){
-      document.getElementById("D3").innerHTML = "Milestone 3 reached";
-    }else{
-      document.getElementById("D3").innerHTML = "Milestone not reached";
-    }
-    if(currentbp>=30){
-      document.getElementById("D4").innerHTML = "Milestone 4 reached";
-    }else{
-      document.getElementById("D4").innerHTML = "Milestone not reached";
-    }
-  }
 
-  function ClaimDiscount(bp){
-    if(currentbp>=bp){
-      currentbp = currentbp - bp;
-      update();
-      document.getElementById("D1").innerHTML = "Claimed - Code: TFUT-FVUG-BWBK-IONR" ;
-    }else if(currentbp>=bp){
-      currentbp = currentbp - bp;
-      update();
-      document.getElementById("D2").innerHTML = "Claimed - Code: TSUN-UNDU-OVOB-SJKI" ;
-    }else if(currentbp>=bp){
-      currentbp = currentbp - bp;
-      update();
-      document.getElementById("D3").innerHTML = "Claimed - Code: TJDN-JNCO-UABO-DFDH" ;
-    }else if(currentbp>=bp){
-      currentbp = currentbp - bp;
-      update();
-      document.getElementById("D4").innerHTML = "Claimed - Code: BYGN-RUHN-FUNH-GRIL" ;
-    }else{
-      document.getElementById("info").innerHTML = "More bp required" ;
+    function update() {
+      document.getElementById("score").innerHTML = currentbp + " Booking Points";
     }
-  }
-</script>
+
+    function ViewDiscount() {
+      if (currentbp > 10) {
+        document.getElementById("D1").innerHTML = "No Milestones reached";
+      }
+      if (currentbp >= 10) {
+        document.getElementById("D1").innerHTML = "Milestone 1 reached";
+      } else {
+        document.getElementById("D1").innerHTML = "Milestone not reached";
+      }
+      if (currentbp >= 15) {
+        document.getElementById("D2").innerHTML = "Milestone 2 reached";
+      } else {
+        document.getElementById("D2").innerHTML = "Milestone not reached";
+      }
+      if (currentbp >= 20) {
+        document.getElementById("D3").innerHTML = "Milestone 3 reached";
+      } else {
+        document.getElementById("D3").innerHTML = "Milestone not reached";
+      }
+      if (currentbp >= 30) {
+        document.getElementById("D4").innerHTML = "Milestone 4 reached";
+      } else {
+        document.getElementById("D4").innerHTML = "Milestone not reached";
+      }
+    }
+
+    function ClaimDiscount(bp) {
+      if (currentbp >= bp) {
+        currentbp = currentbp - bp;
+        update();
+        document.getElementById("D1").innerHTML = "Claimed - Code: TFUT-FVUG-BWBK-IONR";
+      } else if (currentbp >= bp) {
+        currentbp = currentbp - bp;
+        update();
+        document.getElementById("D2").innerHTML = "Claimed - Code: TSUN-UNDU-OVOB-SJKI";
+      } else if (currentbp >= bp) {
+        currentbp = currentbp - bp;
+        update();
+        document.getElementById("D3").innerHTML = "Claimed - Code: TJDN-JNCO-UABO-DFDH";
+      } else if (currentbp >= bp) {
+        currentbp = currentbp - bp;
+        update();
+        document.getElementById("D4").innerHTML = "Claimed - Code: BYGN-RUHN-FUNH-GRIL";
+      } else {
+        document.getElementById("info").innerHTML = "More bp required";
+      }
+    }
+
+    function sendMail() {
+      var node = document.getElementById("favourite-content"),
+        textContent = node.textContent;
+
+      window.location.href = "mailto:marlonnieverasquizon04@gmail.com?subject=Favourites&body=" + "These are your favourite locations: " + textContent;
+    }
+  </script>
 
 </body>
-  <script src="js/scripts.js"></script>
+<script src="js/scripts.js"></script>
+
 </html>

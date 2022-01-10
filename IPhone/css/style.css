@@ -1,13 +1,12 @@
-la*{
-    margin: 0;
-    padding:0;
+la* {
+  margin: 0;
+  padding: 0;
 }
 
-.homecontent{
-    
-  height:100vh;
-  width:100vw;
-  position:absolute;
+.homecontent {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
@@ -15,9 +14,8 @@ la*{
   flex-direction: column;
   z-index: 0;
   overflow: hidden;
-
 }
-.signupin{
+.signupin {
   color: #ffffff;
   font-style: italic;
   top: 600px;
@@ -25,44 +23,41 @@ la*{
   width: 215px;
   display: flex;
   margin-left: -110px;
-} 
+}
 
-.favouriteAddRemove{
+.favouriteAddRemove {
   color: #ffffff;
   font-style: italic;
   margin: auto;
   text-align: center;
   width: 70%;
-} 
+}
 
-.favouriteAddRemove a{
+.favouriteAddRemove a {
   font-weight: lighter;
-    color: white;
-    display: inline-block;
-    background-color: #652CB3;
-    border: 0;
-    border-radius: 5px;
-    font-style: normal;
+  color: white;
+  display: inline-block;
+  background-color: #652cb3;
+  border: 0;
+  border-radius: 5px;
+  font-style: normal;
 }
 
-
-.caroussel{
-    display:flex;
-    width: 300vw;
-    width: 812vw;
-    overflow-y: hidden;
-    overflow-x: hidden;
-
+.caroussel {
+  display: flex;
+  width: 300vw;
+  width: 812vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.home-icons{
-  width: 200px; 
+.home-icons {
+  width: 200px;
   height: 200px;
   margin-top: 10px;
 }
 
-
-.feature{
+.feature {
   margin-top: 50px;
   justify-content: center;
   align-items: center;
@@ -71,8 +66,7 @@ la*{
   text-align: center;
 }
 
-
-.title{
+.title {
   color: #ffffff;
   top: 75px;
   position: absolute;
@@ -81,7 +75,7 @@ la*{
   font-size: 36px;
 }
 
-.slogan{
+.slogan {
   color: #ffffff;
   font-style: italic;
   top: 199px;
@@ -91,17 +85,17 @@ la*{
   font-size: 18px;
 }
 
-.desc{
+.desc {
   color: #ffffff;
   margin-top: 50px;
   top: 290px;
   position: absolute;
   text-align: center;
   font-size: 16px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
-.signinPrompt{
+.signinPrompt {
   color: #ffffff;
   font-style: italic;
   top: 540px;
@@ -109,7 +103,7 @@ la*{
   margin-top: 10px;
   text-align: center;
   font-size: 15px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 /* This is for the carrousel */
@@ -122,7 +116,8 @@ la*{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -144,8 +139,9 @@ la*{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev, .next {
-  background-color: rgba(0,0,0,0.6);
+.prev,
+.next {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Caption text */
@@ -180,7 +176,8 @@ la*{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -204,19 +201,22 @@ la*{
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
 }
 
 /* Location Page */
-.locationText{
+.locationText {
   display: flex;
   justify-content: center;
   text-align: center;
-
 }
 
 .acol .ui-collapsible-heading > .ui-collapsible-heading-toggle {
-  background:#652CB3;
+  background: #652cb3;
   color: white;
   text-align: center;
   /* height: 30px; */
@@ -226,9 +226,9 @@ la*{
 
 /* rating */
 .star-wrapper {
-  direction: rtl; 
+  direction: rtl;
   margin: auto;
-  display:table;
+  display: table;
   margin-bottom: 20px;
 }
 .star-wrapper a {
@@ -268,210 +268,322 @@ la*{
 #map {
   height: 300px;
   padding: 5px;
- }
- /******/
+}
+/******/
 
-#favourite-content{
+#favourite-content {
   height: 75px;
-  width:70%;
+  width: 70%;
 }
 
-.actionbtn{
-  
+.actionbtn {
   color: black;
-
 }
 
-.favouriteAddRemove{
+.favouriteAddRemove {
   color: #ffffff;
   font-style: italic;
   width: 70%;
-} 
-
-.information-into{
-  width:300px;
-  float:left;
-  margin:0 10px;
 }
 
-.information-into img{
+.information-into {
+  width: 300px;
+  float: left;
+  margin: 0 10px;
+}
+
+.information-into img {
   width: 108%;
 }
 
-.information-text{
+.information-text {
   width: 300px;
   display: flex;
   margin: auto;
   margin-top: 10px;
 }
 
-.information-video, .information-map {
-    width: 90%;
+.information-video,
+.information-map {
+  width: 90%;
 }
 
-.information-button{
+.information-button {
   width: 92%;
 }
 
 /*****/
 
-.grid{
-  display:grid;
+.grid {
+  display: grid;
   padding: 10px;
 }
 
-.center{
+.center {
   text-align: center;
   margin: auto;
   padding: 5px;
 }
 /* this is for comment */
-#listBox{
+#listBox {
   border: 2px solid #dbdbdb;
   margin: 10px;
   border-radius: 5px;
 }
 
-#image{
+#image {
   width: 100px;
-    position: relative;
-    display: inline-flex;
-    margin: auto;
+  position: relative;
+  display: inline-flex;
+  margin: auto;
 }
 
-.navDots{
+.navDots {
   text-align: center;
   position: absolute;
   bottom: 15px;
   left: 132px;
 }
 
-#slideContent{
-  overflow:hidden;
+#slideContent {
+  overflow: hidden;
   height: 759px;
 }
 
-.maintitle{
+.maintitle {
   color: #ffffff;
-top: 75px;
-position: absolute;
-margin-bottom: 50px;
-text-align: center;
-font-size: 36px;
+  top: 75px;
+  position: absolute;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 36px;
   position: absolute;
   top: 60px;
 }
 
-.discounts{
+.fav {
+  width: 342px;
   text-align: center;
 }
 
-.discount{
-  background-color: #cbb02f;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    /* width: 90%; */
-    /* margin: auto; */
+.discounts {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* set column sizes here */
+  grid-template-rows: auto auto; /* we want two rows */
+  grid-gap: 10px; /* how far between cells? */
+  grid-auto-flow: column; /* fill in by column, not row */
 }
 
-.discountbtn{
+.discount {
+  background-color: #cbb02f;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  /* width: 90%; */
+  /* margin: auto; */
+}
+
+.discountbtn {
   background-color: white;
   color: black;
   width: 130px;
 }
-#info{
+#info {
   background-color: red;
-    color: white;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 10px;
-    text-align: center;
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
 }
 
+.bookingname {
+  padding-top: 25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.purplebtn {
+  font-weight: lighter !important;
+  color: white !important;
+  display: inline-block;
+  background-color: #652cb3 !important;
+  border: 0;
+  border-radius: 5px;
+  font-style: normal;
+  width: 200px;
+}
+
+#signoutbtn {
+  background-color: red !important;
+  font-weight: lighter !important;
+  color: white !important;
+  border: 0;
+  border-radius: 5px;
+  font-style: normal;
+  width: 190px;
+  position: relative;
+  left: 75px;
+}
+
+.addbookins {
+  width: 305px;
+  text-align: center;
+}
+
+/* ////////email/////// */
+
+.email-links:before {
+  content: '';
+  background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+  border: 5px solid #222;
+  border-radius: 18px;
+  height: 100%;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.email-link {
+  padding: 1rem;
+}
+
+.email-link:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.email-link svg {
+  filter: drop-shadow(1px 0 5px hsla(170, 0%, 0%, 0.5));
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+}
 
 @media (orientation: landscape) {
   body {
     flex-direction: row;
   }
 
-  #slideContent{
-    overflow:hidden;
-    height:323px;
+  #slideContent {
+    overflow: hidden;
+    height: 323px;
   }
 
-  .title{
+  .title {
     position: absolute;
     top: 60px;
     left: 176px;
   }
 
-  .slogan{
+  .slogan {
     position: absolute;
     left: 90px;
     top: 145px;
   }
 
-  .desc{
+  .desc {
     position: absolute;
     top: 160px;
     left: 90px;
   }
 
-  .signinPrompt{
+  .signinPrompt {
     position: absolute;
     top: 140px;
     right: 110px;
   }
 
-  .signupin{
+  .signupin {
     position: absolute;
     top: 214px;
     right: 86px;
   }
 
-  .navDots{
+  .navDots {
     position: absolute;
     bottom: 10px;
     left: 354px;
   }
 
-  #rightSwipe{
+  #rightSwipe {
     margin-top: -26px;
   }
 
-  #leftSwipe{
+  #leftSwipe {
     margin-top: -26px;
   }
 
-  .home-icons{
+  .home-icons {
     position: absolute;
     top: 50px;
     right: 80px;
   }
 
-  .feature{
+  .feature {
     position: absolute;
     left: 150px;
   }
 
-  .maintitle{
+  .maintitle {
     color: #ffffff;
-  top: 75px;
-  position: absolute;
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: 36px;
+    top: 75px;
+    position: absolute;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
     position: absolute;
     top: 60px;
     left: 60px;
   }
+
+  .timedate {
+    width: 340px;
+    position: relative;
+    left: 380px;
+    bottom: 233px;
+  }
+
+  .bookingname {
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 18px;
+  }
+
+  #signoutbtn {
+    background-color: red !important;
+    font-weight: lighter !important;
+    color: white !important;
+    border: 0;
+    border-radius: 5px;
+    font-style: normal;
+    width: 190px;
+    position: relative;
+    left: 290px;
+  }
+
+  #fav1 {
+    width: 342px;
+    text-align: center;
+    position: relative;
+    right: 95px;
+    top: 11px;
+  }
+
+  #shareBtn {
+    width: 342px;
+    position: relative;
+    left: 225px;
+    top: 10px;
+    background-color: #652cb3;
+  }
+
+  .addbookins {
+    width: 710px;
+    text-align: center;
+  }
 }
-
-
-
-
-
-
-

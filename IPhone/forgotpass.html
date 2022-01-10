@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <title>Login</title>
+  <title>Forgot Password</title>
   <meta charset="utf-8">
-  <title>Register</title>
+  <title>Forgot Password></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -122,12 +122,16 @@
         transform: scale(1)
       }
     }
+
+    #gotohome {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <!-- This is register page-->
-  <div data-role="page" id="register">
+  <!-- This is login page-->
+  <div data-role="page" id="fp">
     <div data-role="header"
       style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/loginbg.jpg" alt="login background" style="width: 275px; position: absolute; right: 0;">
@@ -136,43 +140,28 @@
     </div>
 
     <div role="main" class="ui-content">
-      <div id="id01" class="modal">
+      <div class="modal">
 
-        <form class="modal-content animate" action="login.html#login" method="post" onsubmit="reloadHome()">
+        <form id="formid" class="modal-content animate" onsubmit="reloadHome()">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close"
               title="Close Modal"></span>
-            <h1 style="padding-top: 20px;">Sign up</h1>
+            <h1 style="padding-top: 20px;">Forgot your Password?</h1>
           </div>
 
           <div class="container">
-            <label for="fname"><b>Full Name</b></label>
-            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="text" placeholder="Enter Full Name"
-              name="fname" required>
-
-            <label for="uname"><b>Username</b></label>
-            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="text" placeholder="Enter Username"
-              name="uname" required>
-
             <label for="email"><b>Email</b></label>
             <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="text" placeholder="Enter Email"
               name="email" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="password" placeholder="Enter Password"
-              name="psw" required>
-
-            <label for="cpsw"><b> Confirm Password</b></label>
-            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="password" placeholder="Confirm Password"
-              name="cpsw" required>
-
+          </div>
+          <div style="padding-top: 170px;">
             <button
-              style="top: 55px; font-weight: lighter; color: white; display: inline-block; background-color: #652CB3;border: 0; border-radius: 5px; font-style: normal;"
-              type="submit" onclick="">Sign up</button>
-            <label style="width:140px;background-color: transparent;width: 140px; border: none;">
-            </label>
+              style="font-weight: lighter; color: white; display: inline-block; background-color: #652CB3;border: 0; border-radius: 5px; font-style: normal;"
+              type="submit" onclick="">Reset Password</button>
           </div>
         </form>
+
       </div>
 
     </div>

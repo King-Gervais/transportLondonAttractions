@@ -1,153 +1,178 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Login</title>
-    <meta charset="utf-8">
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://kit.fontawesome.com/84925b097c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://kit.fontawesome.com/84925b097c.js" crossorigin="anonymous"></script>
 
-    <style>
-        /* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  /* padding: 12px 20px;
+  <!--icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      /* padding: 12px 20px;
   margin: 8px 0; */
-  display: inline-block;
-  /* border: 1px solid black; */
-  box-sizing: border-box;
-}
+      display: inline-block;
+      /* border: 1px solid black; */
+      box-sizing: border-box;
+    }
 
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+    /* Set a style for all buttons */
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
 
-button:hover {
-  opacity: 0.8;
-}
+    button:hover {
+      opacity: 0.8;
+    }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
 
-.container {
-  padding: 5px;
-  padding-top: 25px;
-}
+    .container {
+      padding: 5px;
+      padding-top: 25px;
+    }
 
-span.psw {
-  float: right;
-}
+    span.psw {
+      float: right;
+    }
 
-/* The Modal (background) */
-.modal {
+    /* The Modal (background) */
+    .modal {
 
-  position: relative; /* Stay in place */
-  
-  left: 0;
-  
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  
-}
+      position: relative;
+      /* Stay in place */
 
-/* Modal Content/Box */
-.modal-content {
-  /* background-color: #fefefe; */
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  /* border: 1px solid #888; */
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+      left: 0;
+
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      /* background-color: #fefefe; */
+      margin: 5% auto 15% auto;
+      /* 5% from the top, 15% from the bottom and centered */
+      /* border: 1px solid #888; */
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
 
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
+    @-webkit-keyframes animatezoom {
+      from {
+        -webkit-transform: scale(0)
+      }
 
-#gotohome{
-  display: none;
-}
-    </style>
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes animatezoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    #gotohome {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- This is login page-->
-<div data-role="page" id="login">
-    <div data-role="header" style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
+  <!-- This is login page-->
+  <div data-role="page" id="login">
+    <div data-role="header"
+      style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
       <img src="img/loginbg.jpg" alt="login background" style="width: 275px; position: absolute; right: 0;">
+      <a data-rel="back" style="margin-top: 14px;"><span class="material-icons">arrow_back_ios_new</span></a>
       <img src="img/logo.png" alt="logo TLA" style="width: 105px; z-index: 1;">
     </div>
 
     <div role="main" class="ui-content">
-        <div  class="modal">
-  
-            <form id="formid" class="modal-content animate" action="index.html#home" rel="external" method="post">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-                <h1 style="padding-top: 20px;">Login</h1>
-              </div>
-          
-              <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="text" placeholder="Enter Username" name="uname" required>
-          
-                <label for="psw"><b>Password</b></label>
-                <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="password" placeholder="Enter Password" name="psw" required>
-                  
-                <button style="font-weight: lighter; color: white; display: inline-block; background-color: #652CB3;border: 0; border-radius: 5px; font-style: normal;" type="submit" onclick="gohome()">Login</button>
-                <label style="width:140px;background-color: transparent;width: 140px; border: none;">
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-              </div>
-          
-              <div class="container">
-                <span class="psw"><a href="#">Forgot password?</a></span>
-              </div>
-            </form>
-            <!-- <div id="gotohome">
-              <a href="index.html#home" rel="external">Go Home</a>
-            </div> -->
-            
+      <div class="modal">
+
+        <form id="formid" class="modal-content animate" onsubmit="reloadHome()">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+              title="Close Modal"></span>
+            <h1 style="padding-top: 20px;">Login</h1>
           </div>
-      
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="text" placeholder="Enter Username"
+              name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input style="box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 35%);" type="password" placeholder="Enter Password"
+              name="psw" required>
+
+            <button
+              style="font-weight: lighter; color: white; display: inline-block; background-color: #652CB3;border: 0; border-radius: 5px; font-style: normal;"
+              type="submit" onclick="">Login</button>
+            <label style="width:140px;background-color: transparent;width: 140px; border: none;">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container">
+            <span class="psw"><a href="forgotpass.html#fp" rel="external">Forgot password?</a></span>
+          </div>
+        </form>
+
+      </div>
+
     </div>
 
     <!-- this is the footer -->
@@ -179,16 +204,11 @@ span.psw {
     </div>
   </div>
 </body>
+
 <script>
-  // function gohome(){
-  //   if($("#formid").valid()){
-  //     document.getElementById("gotohome").style.display = "block";
-  //   }
-    
-  // }
+  function reloadHome() {
+    window.location.href = "index.html#home"
+  }
 </script>
+
 </html>
-
-
-
-
