@@ -17,41 +17,47 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <style>
+    .alert {
+      padding: 10px;
+      background-color: #f44336;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.6s;
+      margin-bottom: 15px;
+      position: absolute;
+      top: 70px;
+      left: 0px;
+      width: 97%;
+      display: none;
+    }
 
+    .alert.success {
+      background-color: #04AA6D;
+    }
 
-.alert {
-  padding: 10px;
-    background-color: #f44336;
-    color: white;
-    opacity: 1;
-    transition: opacity 0.6s;
-    margin-bottom: 15px;
-    position: absolute;
-    top: 70px;
-    left: 0px;
-    width: 97%;
-    display: none;
-}
+    .alert.info {
+      background-color: #2196F3;
+    }
 
-.alert.success {background-color: #04AA6D;}
-.alert.info {background-color: #2196F3;}
-.alert.warning {background-color: #ff9800;}
+    .alert.warning {
+      background-color: #ff9800;
+    }
 
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  
-}
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
 
-.closebtn:hover {
-  color: black;
-}
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
 
 
 
@@ -166,8 +172,6 @@
     #gotohome {
       display: none;
     }
-
-    
   </style>
 </head>
 
@@ -176,32 +180,37 @@
   <div data-role="page" id="login">
     <div data-role="header"
       style="display: flex; justify-content: center;display: flex; justify-content: center; background-color: white; border: 0;">
-      <img src="img/loginbg.jpg" alt="login background" style="    width: 300px; position: absolute; right: 0;">
+      <img src="img/loginbg.jpg" alt="login background" style=" width: 367px; position: absolute; right: 0;">
       <a data-rel="back" style="margin-top: 80px;"><span class="material-icons">arrow_back_ios_new</span></a>
       <div class="nav">
         <input style="display: none;" type="checkbox" id="nav-check">
-          <div class="nav-header">
-            <div class="nav-title">
-              <img src="img/logo.png" alt="logo TLA" style="width: 105px; position:relative; bottom:24px;">
-            </div>
-          </div>
-          <!--toggle button for mobile-->
-          
-          <div class="nav-links center1">
-              <ul>
-                <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#home" rel="external">Home</a></li>
-                <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#location" rel="external">Location</a></li>
-                <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#favourite" rel="external">Favourite</a></li>
-                <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#booking" rel="external">Booking</a></li>
-                <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#account" rel="external">My Account</a></li>
-              </ul>
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="img/logo.png" alt="logo TLA" style="width: 105px; position:relative; bottom:24px;">
           </div>
         </div>
+        <!--toggle button for mobile-->
+
+        <div class="nav-links center1">
+          <ul>
+            <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#home"
+                rel="external">Home</a></li>
+            <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#location"
+                rel="external">Location</a></li>
+            <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#favourite"
+                rel="external">Favourite</a></li>
+            <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#booking"
+                rel="external">Booking</a></li>
+            <li class="bold"><a style="background-color: #D3D3D3; color:black;" href="index.html#account"
+                rel="external">My Account</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div role="main" class="ui-content">
       <div class="alert info">
-        <span class="closebtn">&times;</span>  
+        <span class="closebtn">&times;</span>
         <strong>Info!</strong> You have signed in success
       </div>
       <div class="modal">
@@ -243,7 +252,7 @@
     </div>
 
     <!-- this is the footer -->
-    <div data-role="footer" data-position="fixed" style="position: fixed;">
+    <!-- <div data-role="footer" data-position="fixed" style="position: fixed;">
       <nav data-role="navbar">
         <ul>
           <li><a href="index.html#home" rel="external"><span style="font-size: 2em; color: black;">
@@ -268,7 +277,7 @@
               </span></a></li>
         </ul>
       </nav>
-    </div>
+    </div> -->
   </div>
 </body>
 
