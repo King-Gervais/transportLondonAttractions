@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <!-- this line calls aframe -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- this line calls the AR.js component to be used for aframe and finds the source of different assets like the description of 3D objects, the camera calibration-->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    
+    <div data-role="header" style="display: flex; justify-content: center;">
+    <a href="index.html#poi" class="ui-link ui-btn-left ui-btn ui-shadow ui-corner-all"><span class="material-icons">arrow_back_ios_new</span></a></a>
+    <img src="img/logo.png" alt="TLA Logo"></div>
+
+    <a-scene embedded arjs='sourceType: webcam;'>
+        <a-entity
+              geometry="primitive: plane; width: 3; height: auto" rotation="-90 0 0"
+              material="color: blue"
+              text="value: The National Gallery in London was opened in 1824.">
+        </a-entity>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+    </a-scene>
+    
+</body>
+
+
+
+</html>
